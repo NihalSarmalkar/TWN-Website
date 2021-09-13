@@ -19,6 +19,7 @@ var schema = new mongoose.Schema({
         required: true
 
     },
+    image: String,
     paragraph_2: String,
     paragraph_3: String
 

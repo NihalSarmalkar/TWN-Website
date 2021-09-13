@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require("body-parser");
 const path = require('path');
+const multer = require('multer')
 
 const connectDB = require('./server/database/connection');
 
@@ -30,6 +31,7 @@ app.use('/img', express.static(path.resolve(__dirname, "assets/img")))
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 app.use('/plugins', express.static(path.resolve(__dirname, "assets/plugins")))
 app.use('/scss', express.static(path.resolve(__dirname, "assets/scss")))
+app.use('/upload', express.static(path.resolve(__dirname, "assets/upload")))
 
 // load routers
 app.use('/', require('./server/routes/router'))

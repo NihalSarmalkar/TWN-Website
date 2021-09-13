@@ -1,8 +1,42 @@
 const express = require('express');
 const route = express.Router()
-
+const multer = require('multer')
 const services = require('../services/render');
 const controller = require('../controller/controller');
+
+
+
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './assets/upload/')
+    },
+    filename: function(req, file, cb) {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+        cb(null, uniqueSuffix + '-' + file.originalname)
+    }
+})
+
+
+const fileFilter = (req, file, cb) => {
+    if (file.mimetype == 'image/jpeg' || file.mimetype == 'image/jpg' || file.mimetype == 'image/png') {
+        cb(null, true)
+    } else {
+
+        cb(null, false)
+
+    }
+
+
+}
+
+const upload = multer({
+    storage: storage,
+    limits: {
+        fileSize: 1024 * 1024 * 5
+    },
+    fileFilter: fileFilter
+
+});
 
 //home page route
 route.get('/', services.home);
@@ -51,7 +85,7 @@ route.get('/add-blog', services.add_blog)
 
 
 // API
-route.post('/api/users', controller.create);
+route.post('/api/users', upload.single('avatar'), controller.create);
 route.get('/api/users', controller.find);
 route.put('/api/users/:id', controller.update);
 route.delete('/api/users/:id', controller.delete);

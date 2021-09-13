@@ -15,9 +15,11 @@ exports.create = (req, res) => {
         date: req.body.date,
         paragraph_1: req.body.paragraph_1,
         paragraph_2: req.body.paragraph_2,
-        paragraph_3: req.body.paragraph_3
+        paragraph_3: req.body.paragraph_3,
+        image: req.file.filename
 
     })
+
 
     // save user in the database
     user

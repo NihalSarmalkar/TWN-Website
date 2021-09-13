@@ -74,12 +74,17 @@
                     <% for(var i = 0; i < users.length; i++) { %>
                         <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
                             <div class="blog-post-image">
-                                <img class="img-fluid" src="images/blog/post-1.jpg" alt="" /></a>
+                                <img class="img-fluid" src="upload/<%= users[i].image %>" alt="no image available" /></a>
                             </div>
                             <div class="blog-content">
                                 <h2 class="blogpost-title">
                                     <a href="single-post.html">
                                         <%= users[i].title %>
+                                    </a>
+                                </h2>
+                                <h2 class="blogpost-title">
+                                    <a href="single-post.html">
+                                        <%= users[i].image %>
                                     </a>
                                 </h2>
                                 <h3 class="blogpost-title">

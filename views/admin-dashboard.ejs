@@ -1,0 +1,66 @@
+<!-- include header -->
+<%- include('includes/_header') %>
+    <!-- /include header -->
+
+    <main id="site-main">
+        <div class="container">
+            <h1>Admin Dashboard</h1>
+            <h2 style="text-align: center;">Blog section</h2>
+            <div class="box-nav d-flex justify-between">
+
+                <a href="/add-blog" class="border-shadow">
+                    <span class="text-gradient">New Blog <i class="fas fa-blog"></i></span>
+                </a>
+            </div>
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Tagline</th>
+                            <th>Date</th>
+
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i = 0; i < users.length; i++) { %>
+                            <tr>
+                                <td>
+                                    <%= i + 1 %>
+                                </td>
+                                <td>
+                                    <%= users[i].title %>
+                                </td>
+                                <td>
+                                    <%= users[i].tagline %>
+                                </td>
+                                <td>
+                                    <%= users[i].date %>
+                                </td>
+
+                                <td>
+                                    <a href="/update-blog?id=<%= users[i]._id%>" class="btn border-shadow update">
+                                        <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                    </a>
+                                    <a class="btn border-shadow delete" data-id=<%=users[i]._id %> >
+                                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                </a>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+
+
+
+
+    <!-- include footer -->
+    <%- include('includes/_footer') %>
+        <!-- /include footer -->

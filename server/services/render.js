@@ -34,16 +34,48 @@ exports.services_4wheeler = (req, res) => {
 exports.cart = (req, res) => {
     res.render('cart');
 }
+let one = 'http://localhost:3000/api/users'
+let two = 'http://localhost:3000/api/contacts'
+const requestOne = axios.get(one);
+const requestTwo = axios.get(two);
 
 exports.admin_dashboard = (req, res) => {
+    axios.all([requestOne, requestTwo]).then(axios.spread((...responses) => {
+        const responseOne = responses[0]
+        const responseTwo = responses[1]
+        console.log(responseOne['data'])
+        console.log(responseTwo['data'])
+        res.render('admin-dashboard', { users: responseOne['data'], contacts: responseTwo['data'] });
+
+        // use/access the results 
+    })).catch(errors => {
+        // react on errors.
+        res.send(errors);
+    })
+
+
+
+
+
+
+
+
+
     // Make a get request to /api/users
-    axios.get('http://localhost:3000/api/users')
-        .then(function(response) {
-            res.render('admin-dashboard', { users: response.data });
-        })
-        .catch(err => {
-            res.send(err);
-        })
+    // axios.get('http://localhost:3000/api/users')
+    //     .then(function(response) {
+    //         res.render('admin-dashboard', { users: response.data });
+    //     })
+    //     .catch(err => {
+    //         res.send(err);
+    //     })
+    // axios.get('http://localhost:3000/api/contacts')
+    //     .then(function(response) {
+    //         res.render('admin-dashboard', { contacts: response.data });
+    //     })
+    //     .catch(err => {
+    //         res.send(err);
+    //     })
 
 
 }
@@ -69,6 +101,16 @@ exports.update_blog = (req, res) => {
     axios.get('http://localhost:3000/api/users', { params: { id: req.query.id } })
         .then(function(userdata) {
             res.render("update-blog", { user: userdata.data })
+        })
+        .catch(err => {
+            res.send(err);
+        })
+}
+
+exports.post_page = (req, res) => {
+    axios.get('http://localhost:3000/api/users', { params: { id: req.query.id } })
+        .then(function(userdata) {
+            res.render("post-page", { user: userdata.data })
         })
         .catch(err => {
             res.send(err);

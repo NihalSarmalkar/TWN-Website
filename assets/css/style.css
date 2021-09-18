@@ -1817,3 +1817,15 @@ textarea {
     border-radius: 5px;
     border: 1px solid black;
 }
+
+.table_contact {
+    width: fit-content;
+    margin: auto;
+    height: 100px;
+    overflow: scroll;
+}
+
+.message {
+    width: 350px;
+    height: 100px;
+}

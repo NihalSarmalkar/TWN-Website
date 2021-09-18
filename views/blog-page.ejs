@@ -37,14 +37,15 @@
                     <div class="sidebar">
 
                         <div class="author widget">
-                            <img class="img-fluid" src="images/author/author-bg.jpg">
+
                             <div class="author-body text-center">
                                 <div class="author-img">
                                     <img src="images/author/author.jpg">
                                 </div>
                                 <div class="author-bio">
                                     <h3>The Wheels Nation</h3>
-                                    <p>Admin</p>
+                                    <p>Blog Section </p>
+
                                 </div>
                             </div>
                         </div>
@@ -53,18 +54,14 @@
                         <div class="recent-post widget">
                             <h3>Recent Posts</h3>
                             <ul>
-                                <li>
-                                    <a href="single-post.html">Doorstep Services</a><br>
+                                <% for(var i = 0; i < users.length; i++) { %>
+                                    <li>
+                                        <a href="/post-page?id=<%= users[i]._id%>">
+                                            <%= users[i].title %>
+                                        </a><br>
 
-                                </li>
-                                <li>
-                                    <a href="double-post.html">The Era and Evolution of Motorcycle</a><br>
-
-                                </li>
-                                <li>
-                                    <a href="triple-post.html">Tips on Bike Maintainance</a><br>
-
-                                </li>
+                                    </li>
+                                    <% } %>
 
                             </ul>
                         </div>
@@ -78,17 +75,12 @@
                             </div>
                             <div class="blog-content">
                                 <h2 class="blogpost-title">
-                                    <a href="single-post.html">
+                                    <a href="/post-page?id=<%= users[i]._id%>">
                                         <%= users[i].title %>
                                     </a>
                                 </h2>
-                                <h2 class="blogpost-title">
-                                    <a href="single-post.html">
-                                        <%= users[i].image %>
-                                    </a>
-                                </h2>
                                 <h3 class="blogpost-title">
-                                    <a href="single-post.html">
+                                    <a href="/post-page?id=<%= users[i]._id%>">
                                         <%= users[i].tagline %>
                                     </a>
                                 </h3>
@@ -98,8 +90,8 @@
 
                                 </div>
                                 <p>
-                                    <%= users[i].paragraph_1%>...<br>
-                                        <a href="single-post.html" class="btn btn-dafault btn-details hvr-bounce-to-right">Continue Reading</a>
+                                    <%= users[i].paragraph_1.slice(0,500)%>...<br>
+                                        <a href="/post-page?id=<%= users[i]._id%>" class="btn btn-dafault btn-details hvr-bounce-to-right">Continue Reading</a>
                             </div>
                         </article>
                         <% } %>

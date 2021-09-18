@@ -57,6 +57,42 @@
             </form>
         </div>
     </main>
+    <h2 style="text-align: center;">Contacts section</h2>
+    <br>
+    <table class="table table_contact">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i = 0; i < contacts.length; i++) { %>
+                <tr class="contact_row">
+                    <td>
+                        <%= i + 1 %>
+                    </td>
+                    <td>
+                        <%= contacts[i].name %>
+                    </td>
+                    <td>
+                        <%= contacts[i].email %>
+                    </td>
+                    <td>
+                        <%= contacts[i].subject %>
+                    </td>
+                    <td class="message">
+                        <%= contacts[i].message %>
+                    </td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+    <br>
+    <br>
 
 
 

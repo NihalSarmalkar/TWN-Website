@@ -3,6 +3,7 @@ const route = express.Router()
 const multer = require('multer')
 const services = require('../services/render');
 const controller = require('../controller/controller');
+const controller_contact = require('../controller/controller_contact');
 
 
 
@@ -79,6 +80,8 @@ route.get('/admin_dashboard', services.admin_dashboard)
 
 route.get('/update-blog', services.update_blog)
 
+route.get('/post-page', services.post_page)
+
 route.get('/add-blog', services.add_blog)
 
 
@@ -89,6 +92,8 @@ route.post('/api/users', upload.single('avatar'), controller.create);
 route.get('/api/users', controller.find);
 route.put('/api/users/:id', controller.update);
 route.delete('/api/users/:id', controller.delete);
+route.post('/api/contacts', controller_contact.create);
+route.get('/api/contacts', controller_contact.find);
 
 
 module.exports = route

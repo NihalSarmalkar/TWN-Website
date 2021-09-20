@@ -30,6 +30,9 @@ exports.services_2wheeler = (req, res) => {
 exports.services_4wheeler = (req, res) => {
     res.render('service4');
 }
+exports.login = (req, res) => {
+    res.render('login');
+}
 
 exports.cart = (req, res) => {
     res.render('cart');

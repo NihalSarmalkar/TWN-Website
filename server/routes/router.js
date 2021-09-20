@@ -84,6 +84,9 @@ route.get('/post-page', services.post_page)
 
 route.get('/add-blog', services.add_blog)
 
+route.get('/login', services.login)
+
+
 
 
 

@@ -86,28 +86,145 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script type="text/javascript">
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 20,
-        autoplay: true,
-        autoplayTimeout: 2000,
-        nav: true,
-        stagePadding: 50,
-        loop: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 4
-            }
-        }
-    })
-</script>
-</body>
+  <script type="text/javascript">$('.vidhi').owlCarousel({
+      loop:true,
+      margin:50,
+      autoplay: true,
+      autoplayTimeout: 7000,
+      stagePadding: 50,
+      nav:false,
+      adaptiveHeight: true,
+      loop:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:3
+          },
+          1000:{
+              items:3
+          }
+      }
+      })
+    </script>
+    <script type="text/javascript">$('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:20,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      nav:true,
+      stagePadding: 50,
+      loop:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:3
+          },
+          1000:{
+              items:4
+          }
+      }
+      })
+    </script>
+    <script>
+      var preloader = document.getElementById("loading");
+      // window.addEventListener('load', function(){
+      // preloader.style.display = 'none';
+      // })
 
+      function myFunction(){
+      preloader.style.display = 'none';
+      };
+    </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+      var x = document.getElementById("demo");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+      }
+
+      function showError(error) {
+        switch(error.code) {
+          case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+          case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+          case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+          case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+        }
+      }
+    </script>
+    <script>var slideIndex = 1;
+      var slides = $('.card');
+      buildBullets();
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+         showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+         showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+         var bullets = $('.s-bullet');
+
+         if (n > slides.length) {
+            slideIndex = 1;
+         }
+         if(n < 1) {
+            slideIndex = slides.length;
+         }
+
+         for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+         }
+
+         for (var i = 0; i < bullets.length; i++) {
+            bullets[i].className = bullets[i].className.replace(" b-active", "");
+         }
+
+         bullets[slideIndex - 1].className += " b-active";
+         slides[slideIndex - 1].style.display = "block";
+      }
+
+      function buildBullets() {
+         for (var i = 1; i <= slides.length; i++) {
+            $('.slide-bullets').append('<div class="s-bullet" onclick="currentSlide(' + i + ')"></div>');
+         }
+      }
+    </script>
+    <script>
+    const popup = document.querySelector('.full-screen');
+
+    function showPopup(){
+      popup.classList.remove('hidden');
+    }
+
+    function closePopup(){
+      popup.classList.add('hidden');
+    }
+
+</script>
+  </body>
 </html>

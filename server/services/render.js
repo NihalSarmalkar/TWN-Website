@@ -38,6 +38,17 @@ exports.cart = (req, res) => {
     res.render('cart');
 }
 
+exports.privacy_policy = (req, res) => {
+    res.render('privacy_policy');
+}
+
+exports.terms_conditions = (req, res) => {
+    res.render('terms_conditions');
+}
+
+
+
+
 let one = 'http://localhost:3000/api/users'
 let two = 'http://localhost:3000/api/contacts'
 const requestOne = axios.get(one);

@@ -9,7 +9,7 @@ exports.create = (req, res) => {
     }
 
     // new user
-    const cont = new Contactdb({
+    const cust = new Contactdb({
         name: req.body.name,
         email: req.body.email,
         subject: req.body.subject,
@@ -19,8 +19,8 @@ exports.create = (req, res) => {
 
 
     // save user in the database
-    cont
-        .save(cont)
+    cust
+        .save(cust)
         .then(data => {
             //res.send(data)
             res.redirect('/');

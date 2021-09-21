@@ -4,6 +4,7 @@ const multer = require('multer')
 const services = require('../services/render');
 const controller = require('../controller/controller');
 const controller_contact = require('../controller/controller_contact');
+const controller_customer = require('../controller/controller_customer');
 
 
 
@@ -97,6 +98,9 @@ route.put('/api/users/:id', controller.update);
 route.delete('/api/users/:id', controller.delete);
 route.post('/api/contacts', controller_contact.create);
 route.get('/api/contacts', controller_contact.find);
+route.post('/api/register_customer', controller_customer.register_customer);
+route.post('/api/login_customer', controller_customer.login_customer);
+
 
 
 module.exports = route

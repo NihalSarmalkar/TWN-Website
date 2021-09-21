@@ -37,6 +37,7 @@ exports.login = (req, res) => {
 exports.cart = (req, res) => {
     res.render('cart');
 }
+
 let one = 'http://localhost:3000/api/users'
 let two = 'http://localhost:3000/api/contacts'
 const requestOne = axios.get(one);

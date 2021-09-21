@@ -1,6 +1,13 @@
 $("#add_user").submit(function(event) {
     alert("Data Inserted Successfully!");
 })
+$("#frm_login").submit(function(event) {
+    alert("loged in Successfully!");
+})
+$("#frm_register").submit(function(event) {
+    alert("Account created Successfully!");
+})
+
 
 $("#update_user").submit(function(event) {
     event.preventDefault();

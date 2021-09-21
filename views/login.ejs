@@ -118,7 +118,7 @@
             background: none;
             background-image: none;
             border: 1px solid #a0b3b0;
-            color: #ffffff;
+            color: #000000;
             border-radius: 0;
             transition: border-color .25s ease, box-shadow .25s ease;
             padding: 10px;
@@ -287,7 +287,7 @@
                 <h1>Login</h1>
                 <div class="card-body">
 
-                    <form id="frm" method="POST" action="{{ url_for('create_user') }}" enctype="multipart/form-data">
+                    <form id="frm_login" method="POST" action="/api/login_customer">
 
 
                         <div class="form-row">
@@ -303,7 +303,7 @@
                         <div class="form-row">
                             <div class="name">Password</div>
                             <div class="value">
-                                <input class="input--style-6" type="password" name="location">
+                                <input class="input--style-6" type="password" name="password">
                             </div>
 
 
@@ -323,12 +323,12 @@
             <div id="login">
                 <h1>Sign up</h1>
                 <div class="card-body">
-                    <form id="frm" method="POST" action="{{ url_for('create_user') }}" enctype="multipart/form-data">
+                    <form id="frm_register" method="POST" action="/api/register_customer">
 
                         <div class="form-row">
-                            <div class="name">Full name</div>
+                            <div class="name">Username</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="name">
+                                <input class="input--style-6" type="text" name="username">
                             </div>
 
 
@@ -346,7 +346,7 @@
                         <div class="form-row">
                             <div class="name">Password</div>
                             <div class="value">
-                                <input class="input--style-6" type="password" name="location">
+                                <input class="input--style-6" type="password" name="password">
                             </div>
 
 
@@ -426,6 +426,7 @@
             }
         });
     </script>
+    <script src="js/index.js"></script>
 
 </body>
 

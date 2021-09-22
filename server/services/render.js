@@ -45,6 +45,9 @@ exports.privacy_policy = (req, res) => {
 exports.terms_conditions = (req, res) => {
     res.render('terms_conditions');
 }
+exports.faq = (req, res) => {
+    res.render('faq');
+}
 
 
 

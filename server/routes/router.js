@@ -91,6 +91,7 @@ route.get('/terms-conditions', services.terms_conditions)
 
 route.get('/privacy-policy', services.privacy_policy)
 
+route.get('/faq', services.faq)
 
 
 

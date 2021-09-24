@@ -5,6 +5,7 @@ const services = require('../services/render');
 const controller = require('../controller/controller');
 const controller_contact = require('../controller/controller_contact');
 const controller_customer = require('../controller/controller_customer');
+const controller_serviceprovider = require('../controller/controller_serviceprovider');
 
 
 
@@ -91,19 +92,35 @@ route.get('/terms-conditions', services.terms_conditions)
 
 route.get('/privacy-policy', services.privacy_policy)
 
+route.get('/add-serviceprovider', services.add_serviceprovider)
 
 
 
 
-// API
+
+
+// API for blogs
 route.post('/api/users', upload.single('avatar'), controller.create);
 route.get('/api/users', controller.find);
 route.put('/api/users/:id', controller.update);
 route.delete('/api/users/:id', controller.delete);
+
+// API for contacts
 route.post('/api/contacts', controller_contact.create);
 route.get('/api/contacts', controller_contact.find);
+
+// API for customers
 route.post('/api/register_customer', controller_customer.register_customer);
 route.post('/api/login_customer', controller_customer.login_customer);
+route.post('/api/customer/:id', controller_customer.find);
+
+// API for service providers
+route.post('/api/serviceprovider', upload.single('avatar'), controller_serviceprovider.create);
+route.get('/api/serviceprovider', controller_serviceprovider.find);
+route.put('/api/serviceprovider/:id', controller_serviceprovider.update);
+route.delete('/api/serviceprovider/:id', controller_serviceprovider.delete);
+
+
 
 
 

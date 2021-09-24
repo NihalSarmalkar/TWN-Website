@@ -93,108 +93,21 @@
                     <div class="block">
                         <div class="row service-parts">
                             <div class="col-md-6">
-                                <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
-                                    <a href="/services_provider_list"><i class="ion-ios-paper-outline" color: #041c3c></i></a>
-                                    <a href="/services_provider_list" style="color:#041c3c">
-                                        <h4>GENERAL SERVICE</h4>
-                                    </a><br>
-                                    <button type="button" class="collapsible">Open Collapsible</button>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                            ea commodo consequat.</p>
+                                <% for(var i = 0; i < service_list.length; i++) { %>
+                                    <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
+                                        <a href="/services_provider_list"><i class="ion-ios-paper-outline" color: #041c3c></i></a>
+                                        <a href="/services_provider_list?service=<%= service_list[i]%>" style="color:#041c3c">
+                                            <h4>
+                                                <%= service_list[i] %>
+                                            </h4>
+                                        </a><br>
+                                        <button type="button" class="collapsible">Open Collapsible</button>
+                                        <div class="content">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                                ex ea commodo consequat.</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
-                                    <a href="/services_provider_list"><i class="ion-ios-paper-outline"></i></a>
-                                    <a href="/services_provider_list" style="color:#041c3c">
-                                        <h4>GENERAL PRO SERVICE</h4>
-                                    </a><br>
-                                    <button type="button" class="collapsible">Open Collapsible</button>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                            ea commodo consequat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
-                                    <a href="/services_provider_list"><i class="ion-ios-paper-outline"></i></a>
-                                    <a href="/services_provider_list" style="color:#041c3c">
-                                        <h4>GENERAL PREMIUM SERVICE</h4>
-                                    </a>
-                                    <button type="button" class="collapsible">Open Collapsible</button>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                            ea commodo consequat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
-                                    <a href="service-providers-list.html"><i class="ion-ios-paper-outline"></i></a>
-                                    <a href="service-providers-list.html" style="color:#041c3c">
-                                        <h4>CUSTOMIZED SERVICE</h4>
-                                    </a><br>
-                                    <button type="button" class="collapsible">Open Collapsible</button>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                            ea commodo consequat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
-                                    <a href="service-providers-list.html"><i class="ion-ios-paper-outline"></i></a>
-                                    <a href="service-providers-list.html" style="color:#041c3c">
-                                        <h4>BIKE MODIFICATION</h4>
-                                    </a><br>
-                                    <button type="button" class="collapsible">Open Collapsible</button>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                            ea commodo consequat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
-                                    <a href="service-providers-list.html"><i class="ion-ios-paper-outline"></i></a>
-                                    <a href="service-providers-list.html" style="color:#041c3c">
-                                        <h4>ACCIDENTAL REPAIR</h4>
-                                    </a><br>
-                                    <button type="button" class="collapsible">Open Collapsible</button>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                            ea commodo consequat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
-                                    <a href="service-providers-list.html"><i class="ion-ios-paper-outline"></i></a>
-                                    <a href="service-providers-list.html" style="color:#041c3c">
-                                        <h4>VEHICLE HEALTH REPORT</h4>
-                                    </a><br>
-                                    <button type="button" class="collapsible">Open Collapsible</button>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                            ea commodo consequat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
-                                    <a href="service-providers-list.html"><i class="ion-ios-paper-outline"></i></a>
-                                    <a href="service-providers-list.html" style="color:#041c3c">
-                                        <h4>OILING</h4>
-                                    </a><br>
-                                    <button type="button" class="collapsible">Open Collapsible</button>
-                                    <div class="content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                            ea commodo consequat.</p>
-                                    </div>
-                                </div>
+                                    <% } %>
                             </div>
                         </div>
                     </div>

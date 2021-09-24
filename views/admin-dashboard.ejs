@@ -57,6 +57,64 @@
             </form>
         </div>
     </main>
+
+    <br>
+    <br>
+    <div class="container">
+        <h2 style="text-align: center;">Service provider section</h2>
+        <div class="box-nav d-flex justify-between">
+
+            <a href="/add-serviceprovider" class="border-shadow">
+                <span class="text-gradient">Add New Service provider <i class="fas fa-blog"></i></span>
+            </a>
+        </div>
+        <br>
+        <br>
+
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Service</th>
+                        <th>Price</th>
+
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i = 0; i < serviceproviderlist.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= i + 1 %>
+                            </td>
+                            <td>
+                                <%= serviceproviderlist[i].name %>
+                            </td>
+                            <td>
+                                <%= serviceproviderlist[i].service %>
+                            </td>
+                            <td>
+                                <%= serviceproviderlist[i].price %>
+                            </td>
+
+                            <td>
+                                <a href="" class="btn border-shadow update">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                </a>
+                                <a class="btn border-shadow delete">
+                                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                </a>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <br>
+    <br>
     <h2 style="text-align: center;">Contacts section</h2>
     <br>
     <table class="table table_contact">
@@ -91,8 +149,6 @@
                 <% } %>
         </tbody>
     </table>
-    <br>
-    <br>
 
 
 

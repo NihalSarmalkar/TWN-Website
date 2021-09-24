@@ -1,6 +1,13 @@
 const axios = require('axios');
 
 exports.home = (req, res) => {
+    // axios.get('http://localhost:3000/api/customer', { params: { id: req.query.id } })
+    //     .then(function(userdata) {
+    //         res.render("index", { user: userdata.data })
+    //     })
+    //     .catch(err => {
+    //         res.send(err);
+    //     })
     res.render('index');
 }
 exports.post = (req, res) => {
@@ -18,49 +25,69 @@ exports.why = (req, res) => {
 exports.services_provider = (req, res) => {
     res.render('services_provider');
 }
-exports.services_provider_list = (req, res) => {
-    res.render('service-providers-list');
-}
+
 exports.services_provider_list_details = (req, res) => {
     res.render('service-provider-details');
 }
+
+
+
 exports.services_2wheeler = (req, res) => {
-    res.render('service');
+    let one = 'http://localhost:3000/api/serviceprovider'
+    const requestOne = axios.get(one);
+    axios.all([requestOne]).then(axios.spread((...responses) => {
+        const responseOne = responses[0]
+        var arr = responseOne['data']
+        var arr2 = []
+        for (let i in arr) {
+            arr2.push(arr[i]["service"])
+        }
+
+
+        let unique = arr2.filter((item, i, ar) => ar.indexOf(item) === i);
+
+
+        res.render('service', { service_list: unique });
+
+        // use/access the results 
+    })).catch(errors => {
+        // react on errors.
+        res.send(errors);
+    })
+
+
+
+
+
+
+
+
+    // axios.get('http://localhost:3000/api/serviceprovider')
+    //     .then(function(response) {
+    //         print(response.data)
+
+    //         res.render('service', { services: response.data });
+    //     })
+    //     .catch(err => {
+    //         res.send(err);
+    //     })
 }
-exports.services_4wheeler = (req, res) => {
-    res.render('service4');
-}
-exports.login = (req, res) => {
-    res.render('login');
-}
-
-exports.cart = (req, res) => {
-    res.render('cart');
-}
-
-exports.privacy_policy = (req, res) => {
-    res.render('privacy_policy');
-}
-
-exports.terms_conditions = (req, res) => {
-    res.render('terms_conditions');
-}
 
 
-
-
-let one = 'http://localhost:3000/api/users'
-let two = 'http://localhost:3000/api/contacts'
-const requestOne = axios.get(one);
-const requestTwo = axios.get(two);
 
 exports.admin_dashboard = (req, res) => {
-    axios.all([requestOne, requestTwo]).then(axios.spread((...responses) => {
+    let one = 'http://localhost:3000/api/users'
+    let two = 'http://localhost:3000/api/contacts'
+    let three = 'http://localhost:3000/api/serviceprovider'
+    const requestOne = axios.get(one);
+    const requestTwo = axios.get(two);
+    const requestThree = axios.get(three);
+    axios.all([requestOne, requestTwo, requestThree]).then(axios.spread((...responses) => {
         const responseOne = responses[0]
         const responseTwo = responses[1]
-        console.log(responseOne['data'])
-        console.log(responseTwo['data'])
-        res.render('admin-dashboard', { users: responseOne['data'], contacts: responseTwo['data'] });
+        const responseThree = responses[2]
+
+        res.render('admin-dashboard', { users: responseOne['data'], contacts: responseTwo['data'], serviceproviderlist: responseThree['data'] });
 
         // use/access the results 
     })).catch(errors => {
@@ -95,6 +122,25 @@ exports.admin_dashboard = (req, res) => {
 
 }
 
+exports.services_4wheeler = (req, res) => {
+    res.render('service4');
+}
+exports.login = (req, res) => {
+    res.render('login');
+}
+
+exports.cart = (req, res) => {
+    res.render('cart');
+}
+
+exports.privacy_policy = (req, res) => {
+    res.render('privacy_policy');
+}
+
+exports.terms_conditions = (req, res) => {
+    res.render('terms_conditions');
+}
+
 exports.blog = (req, res) => {
     // Make a get request to /api/users
     axios.get('http://localhost:3000/api/users')
@@ -112,10 +158,25 @@ exports.add_blog = (req, res) => {
     res.render('add-blog');
 }
 
+exports.add_serviceprovider = (req, res) => {
+    res.render('add-serviceprovider');
+}
+
 exports.update_blog = (req, res) => {
     axios.get('http://localhost:3000/api/users', { params: { id: req.query.id } })
         .then(function(userdata) {
             res.render("update-blog", { user: userdata.data })
+        })
+        .catch(err => {
+            res.send(err);
+        })
+}
+
+
+exports.services_provider_list = (req, res) => {
+    axios.get('http://localhost:3000/api/serviceprovider', { params: { service: req.query.service } })
+        .then(function(userdata) {
+            res.render("service-providers-list", { user: userdata.data })
         })
         .catch(err => {
             res.send(err);

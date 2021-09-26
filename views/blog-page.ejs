@@ -39,8 +39,8 @@
                         <div class="author widget">
 
                             <div class="author-body text-center">
-                                <div class="author-img">
-                                    <img src="images/author/author.jpg">
+                                <div class="author-img" style="margin: 30px;">
+                                    <img src="img/TWN Logo.jpg">
                                 </div>
                                 <div class="author-bio">
                                     <h3>The Wheels Nation</h3>
@@ -53,7 +53,7 @@
 
                         <div class="recent-post widget">
                             <h3>Recent Posts</h3>
-                            <ul>
+                            <ol>
                                 <% for(var i = 0; i < users.length; i++) { %>
                                     <li>
                                         <a href="/post-page?id=<%= users[i]._id%>">
@@ -63,7 +63,7 @@
                                     </li>
                                     <% } %>
 
-                            </ul>
+                            </ol>
                         </div>
                     </div>
                 </div>

@@ -25,8 +25,8 @@
     <div class="container">
         <div class="row content-justify-between">
             <div class="col-md-8 col-12 text-center text-lg-left text-md-left">
-                   <a href="/privacy-policy" style="color:#041c3c;" >PRIVACY POLICY</a><br>
-                    <a href="/terms-conditions" style="color:#041c3c;" >TERMS AND CONDITIONS</a><br> <a href="/faq" style="color:#041c3c;" >FAQ</a><br><a href="/terms-conditions" style="color:#041c3c;" >DASHBOARD LOGIN</a>
+                <a href="/privacy-policy" style="color:#041c3c;">PRIVACY POLICY</a><br>
+                <a href="/terms-conditions" style="color:#041c3c;">TERMS AND CONDITIONS</a><br> <a href="/faq" style="color:#041c3c;">FAQ</a><br><a href="/admin_dashboard" style="color:#041c3c;">DASHBOARD LOGIN</a>
 
 
             </div>
@@ -54,10 +54,10 @@
                         </a>
                     </li>
                     <li>
-                <a href="https://wa.me/918105003848?text=I%20want%20to%20book%20a%20service" class="Google Plus">
-                <i class="ion-social-whatsapp"></i>
-                </a>
-              </li>
+                        <a href="https://wa.me/918105003848?text=I%20want%20to%20book%20a%20service" class="Google Plus">
+                            <i class="ion-social-whatsapp"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -94,161 +94,164 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script type="text/javascript">$('.vidhi').owlCarousel({
-      loop:true,
-      margin:50,
-      autoplay: true,
-      autoplayTimeout: 7000,
-      stagePadding: 50,
-      nav:false,
-      adaptiveHeight: true,
-      loop:true,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:3
-          },
-          1000:{
-              items:3
-          }
-      }
-      })
-    </script>
-    <script type="text/javascript">$('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:20,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      nav:true,
-      stagePadding: 50,
-      loop:true,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:3
-          },
-          1000:{
-              items:4
-          }
-      }
-      })
-    </script>
-    <script>
-      var preloader = document.getElementById("loading");
-      // window.addEventListener('load', function(){
-      // preloader.style.display = 'none';
-      // })
+<script type="text/javascript">
+    $('.vidhi').owlCarousel({
+        loop: true,
+        margin: 50,
+        autoplay: true,
+        autoplayTimeout: 7000,
+        stagePadding: 50,
+        nav: false,
+        adaptiveHeight: true,
+        loop: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+</script>
+<script type="text/javascript">
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        nav: true,
+        stagePadding: 50,
+        loop: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+</script>
+<script>
+    var preloader = document.getElementById("loading");
+    // window.addEventListener('load', function(){
+    // preloader.style.display = 'none';
+    // })
 
-      function myFunction(){
-      preloader.style.display = 'none';
-      };
-    </script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script>
-      var x = document.getElementById("demo");
+    function myFunction() {
+        preloader.style.display = 'none';
+    };
+</script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script>
+    var x = document.getElementById("demo");
 
-      function getLocation() {
+    function getLocation() {
         if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition, showError);
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
         } else {
-          x.innerHTML = "Geolocation is not supported by this browser.";
+            x.innerHTML = "Geolocation is not supported by this browser.";
         }
-      }
+    }
 
-      function showPosition(position) {
+    function showPosition(position) {
         x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-      }
+            "<br>Longitude: " + position.coords.longitude;
+    }
 
-      function showError(error) {
-        switch(error.code) {
-          case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation."
-            break;
-          case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable."
-            break;
-          case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out."
-            break;
-          case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred."
-            break;
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                x.innerHTML = "User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                x.innerHTML = "The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML = "An unknown error occurred."
+                break;
         }
-      }
-    </script>
-    <script>var slideIndex = 1;
-      var slides = $('.card');
-      buildBullets();
-      showSlides(slideIndex);
+    }
+</script>
+<script>
+    var slideIndex = 1;
+    var slides = $('.card');
+    buildBullets();
+    showSlides(slideIndex);
 
-      function plusSlides(n) {
-         showSlides(slideIndex += n);
-      }
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
 
-      function currentSlide(n) {
-         showSlides(slideIndex = n);
-      }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
 
-      function showSlides(n) {
-         var bullets = $('.s-bullet');
+    function showSlides(n) {
+        var bullets = $('.s-bullet');
 
-         if (n > slides.length) {
+        if (n > slides.length) {
             slideIndex = 1;
-         }
-         if(n < 1) {
+        }
+        if (n < 1) {
             slideIndex = slides.length;
-         }
+        }
 
-         for (var i = 0; i < slides.length; i++) {
+        for (var i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
-         }
+        }
 
-         for (var i = 0; i < bullets.length; i++) {
+        for (var i = 0; i < bullets.length; i++) {
             bullets[i].className = bullets[i].className.replace(" b-active", "");
-         }
+        }
 
-         bullets[slideIndex - 1].className += " b-active";
-         slides[slideIndex - 1].style.display = "block";
-      }
+        bullets[slideIndex - 1].className += " b-active";
+        slides[slideIndex - 1].style.display = "block";
+    }
 
-      function buildBullets() {
-         for (var i = 1; i <= slides.length; i++) {
+    function buildBullets() {
+        for (var i = 1; i <= slides.length; i++) {
             $('.slide-bullets').append('<div class="s-bullet" onclick="currentSlide(' + i + ')"></div>');
-         }
-      }
-    </script>
-    <script>
+        }
+    }
+</script>
+<script>
     const popup = document.querySelector('.full-screen');
 
-    function showPopup(){
-      popup.classList.remove('hidden');
+    function showPopup() {
+        popup.classList.remove('hidden');
     }
 
-    function closePopup(){
-      popup.classList.add('hidden');
+    function closePopup() {
+        popup.classList.add('hidden');
     }
-
 </script>
-      <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-            for (i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                        content.style.display = "none";
-                    } else {
-                        content.style.display = "block";
-                    }
-                });
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
             }
-        </script>
-  </body>
+        });
+    }
+</script>
+</body>
+
 </html>

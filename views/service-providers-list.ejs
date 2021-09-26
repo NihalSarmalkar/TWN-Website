@@ -50,22 +50,23 @@
 
 
                             <div class="recent-post widget">
-                                <h3>Service Providers</h3>
+                                <div>
+                                    <img src="upload/<%= user[i].image %>" alt="" style="width: 200px;">
+                                </div>
+                                <h3>
+                                    <%= user[i].name %>
+                                </h3>
                                 <ul>
+
                                     <li>
                                         <a href="service-provider-details.html">
-                                            <%= user[i].name %>
+
                                         </a><br>
 
                                     </li>
-                                    <li>
-                                        <a href="service-provider-details.html">Provider 2</a><br>
+                                    <a href=""><button type="submit">Select</button></a>
 
-                                    </li>
-                                    <li>
-                                        <a href="service-provider-details.html">Provider 3</a><br>
 
-                                    </li>
 
                                 </ul>
                             </div>

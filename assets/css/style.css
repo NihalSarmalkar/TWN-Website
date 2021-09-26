@@ -1863,3 +1863,13 @@ textarea {
 	z-index: 99999;
 	position: fixed;
 }
+/*dashboard table overflow*/
+.scrollit {
+    overflow-y:scroll;
+    height:400px;
+
+
+}
+.scrollitt {
+    overflow-y:scroll;
+    height:200px;

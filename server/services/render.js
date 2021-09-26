@@ -55,13 +55,6 @@ exports.services_2wheeler = (req, res) => {
         res.send(errors);
     })
 
-
-
-
-
-
-
-
     // axios.get('http://localhost:3000/api/serviceprovider')
     //     .then(function(response) {
     //         print(response.data)
@@ -72,6 +65,15 @@ exports.services_2wheeler = (req, res) => {
     //         res.send(err);
     //     })
 }
+
+exports.terms_conditions = (req, res) => {
+    res.render('terms_conditions');
+}
+exports.faq = (req, res) => {
+    res.render('faq');
+}
+
+
 
 
 

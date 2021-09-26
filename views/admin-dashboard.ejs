@@ -15,45 +15,47 @@
 
             <!-- form handling -->
             <form action="/" method="POST">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Tagline</th>
-                            <th>Date</th>
-
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% for(var i = 0; i < users.length; i++) { %>
+                <div class="scrollitt">
+                    <table class="table">
+                        <thead class="thead-dark">
                             <tr>
-                                <td>
-                                    <%= i + 1 %>
-                                </td>
-                                <td>
-                                    <%= users[i].title %>
-                                </td>
-                                <td>
-                                    <%= users[i].tagline %>
-                                </td>
-                                <td>
-                                    <%= users[i].date %>
-                                </td>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Tagline</th>
+                                <th>Date</th>
 
-                                <td>
-                                    <a href="/update-blog?id=<%= users[i]._id%>" class="btn border-shadow update">
-                                        <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                                    </a>
-                                    <a class="btn border-shadow delete" data-id=<%=users[i]._id %> >
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(var i = 0; i < users.length; i++) { %>
+                                <tr>
+                                    <td>
+                                        <%= i + 1 %>
+                                    </td>
+                                    <td>
+                                        <%= users[i].title %>
+                                    </td>
+                                    <td>
+                                        <%= users[i].tagline %>
+                                    </td>
+                                    <td>
+                                        <%= users[i].date %>
+                                    </td>
+
+                                    <td>
+                                        <a href="/update-blog?id=<%= users[i]._id%>" class="btn border-shadow update">
+                                            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                        </a>
+                                        <a class="btn border-shadow delete" data-id=<%=users[i]._id %> >
                                     <span class="text-gradient"><i class="fas fa-times"></i></span>
                                 </a>
-                                </td>
-                            </tr>
-                            <% } %>
-                    </tbody>
-                </table>
+                                    </td>
+                                </tr>
+                                <% } %>
+                        </tbody>
+                    </table>
+                </div>
             </form>
         </div>
     </main>
@@ -117,38 +119,42 @@
     <br>
     <h2 style="text-align: center;">Contacts section</h2>
     <br>
-    <table class="table table_contact">
-        <thead class="thead-dark">
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Subject</th>
-                <th>Message</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% for(var i = 0; i < contacts.length; i++) { %>
-                <tr class="contact_row">
-                    <td>
-                        <%= i + 1 %>
-                    </td>
-                    <td>
-                        <%= contacts[i].name %>
-                    </td>
-                    <td>
-                        <%= contacts[i].email %>
-                    </td>
-                    <td>
-                        <%= contacts[i].subject %>
-                    </td>
-                    <td class="message">
-                        <%= contacts[i].message %>
-                    </td>
+    <div class="scrollit">
+        <table class="table table_contact">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Message</th>
                 </tr>
-                <% } %>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <% for(var i = 0; i < contacts.length; i++) { %>
+                    <tr class="contact_row">
+                        <td>
+                            <%= i + 1 %>
+                        </td>
+                        <td>
+                            <%= contacts[i].name %>
+                        </td>
+                        <td>
+                            <%= contacts[i].email %>
+                        </td>
+                        <td>
+                            <%= contacts[i].subject %>
+                        </td>
+                        <td class="message">
+                            <%= contacts[i].message %>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
 
 
 

@@ -1863,3 +1863,18 @@ textarea {
 	z-index: 99999;
 	position: fixed;
 }
+/*dashboard table overflow*/
+.scrollit {
+    overflow-y:scroll;
+    height:400px;
+
+
+}
+.scrollitt {
+    overflow-y:scroll;
+    height:200px;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */

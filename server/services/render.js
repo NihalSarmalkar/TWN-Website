@@ -32,6 +32,7 @@ exports.services_provider_list_details = (req, res) => {
 
 
 
+
 exports.services_2wheeler = (req, res) => {
     let one = 'http://localhost:3000/api/serviceprovider'
     const requestOne = axios.get(one);
@@ -173,6 +174,18 @@ exports.update_blog = (req, res) => {
             res.send(err);
         })
 }
+
+exports.update_serviceprovider = (req, res) => {
+    axios.get('http://localhost:3000/api/serviceprovider', { params: { id: req.query.id } })
+        .then(function(userdata) {
+            res.render("update-serviceprovider", { details: userdata.data })
+        })
+        .catch(err => {
+            res.send(err);
+        })
+
+}
+
 
 
 exports.services_provider_list = (req, res) => {

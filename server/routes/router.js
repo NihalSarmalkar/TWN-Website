@@ -82,6 +82,8 @@ route.get('/admin_dashboard', services.admin_dashboard)
 
 route.get('/update-blog', services.update_blog)
 
+route.get('/update-serviceprovider', services.update_serviceprovider)
+
 route.get('/post-page', services.post_page)
 
 route.get('/add-blog', services.add_blog)

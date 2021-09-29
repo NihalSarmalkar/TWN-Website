@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
-    name: {
+    vendor_name: {
         type: String,
         required: true
     },
@@ -10,16 +10,53 @@ var schema = new mongoose.Schema({
         required: true,
 
     },
-    details: {
+    address: {
         type: String,
         required: true
     },
-    price: {
+    timing: {
         type: String,
         required: true
 
     },
-    image: String,
+    benificiary_name: {
+        type: String,
+        required: true
+    },
+    bank_address: {
+        type: String,
+        required: true
+    },
+    bank_acc: {
+        type: String,
+        required: true
+    },
+    acc_type: {
+        type: String,
+        required: true
+    },
+    ifsc_code: {
+        type: String,
+        required: true
+    },
+    image_aadhar: {
+        type: Array,
+        default: [],
+    },
+    image_driving: {
+        type: Array,
+        default: [],
+    },
+    image_technician: {
+        type: Array,
+        default: [],
+    },
+    image_garage: {
+        type: Array,
+        default: [],
+    },
+    image_electricity_bill: String,
+    image_agreement: String,
 });
 
 const serviceproviderdb = mongoose.model('serviceproviderdb', schema);

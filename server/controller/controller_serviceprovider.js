@@ -8,23 +8,35 @@ exports.create = (req, res) => {
         return;
     }
 
+
     // new user
     const user = new serviceproviderdb({
-        name: req.body.name,
+        vendor_name: req.body.vendor_name,
         service: req.body.service,
-        date: req.body.date,
-        details: req.body.details,
-        price: req.body.price,
-        image: req.file.filename
+        address: req.body.address,
+        timing: req.body.timings,
+        benificiary_name: req.body.benificiary_name,
+        bank_address: req.body.bank_address,
+        bank_acc: req.body.bank_account,
+        acc_type: req.body.account_type,
+        ifsc_code: req.body.ifsc_code,
+        image_aadhar: req.files.aadhar_avatar[0].filename,
+        image_driving: req.files.license_avatar[0].filename,
+        image_technician: req.files.technician_avatar[0].filename,
+        image_garage: req.files.garage_avatar[0].filename,
+        image_electricity_bill: req.files.electricity_avatar[0].filename,
+        image_agreement: req.files.agreement_avatar[0].filename
+
 
     })
+
+
 
 
     // save user in the database
     user
         .save(user)
         .then(data => {
-            //res.send(data)
             res.redirect('/add-serviceprovider');
         })
         .catch(err => {

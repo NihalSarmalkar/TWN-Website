@@ -51,11 +51,19 @@
 
                             <div class="recent-post widget">
                                 <div>
-                                    <img src="upload/<%= user[i].image %>" alt="" style="width: 200px;">
+                                    <img src="upload/<%= user[i].image_technician[0] %>" alt="" style="width: 200px;">
                                 </div>
-                                <h3>
-                                    <%= user[i].name %>
-                                </h3>
+                                <h2>
+                                    <%= user[i].vendor_name %>
+                                </h2>
+                                <h4>
+                                    <%= user[i].address %>
+
+                                </h4>
+                                <h4>
+                                    <%= user[i].timing %>
+
+                                </h4>
                                 <ul>
 
                                     <li>

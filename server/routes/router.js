@@ -121,7 +121,9 @@ route.post('/api/login_customer', controller_customer.login_customer);
 route.post('/api/customer/:id', controller_customer.find);
 
 // API for service providers
-route.post('/api/serviceprovider', upload.single('avatar'), controller_serviceprovider.create);
+
+var uploadMultiple = upload.fields([{ name: 'aadhar_avatar', maxCount: 4 }, { name: 'license_avatar', maxCount: 4 }, { name: 'technician_avatar', maxCount: 4 }, { name: 'garage_avatar', maxCount: 4 }, { name: 'electricity_avatar', maxCount: 1 }, { name: 'agreement_avatar', maxCount: 1 }])
+route.post('/api/serviceprovider', uploadMultiple, controller_serviceprovider.create);
 route.get('/api/serviceprovider', controller_serviceprovider.find);
 route.put('/api/serviceprovider/:id', controller_serviceprovider.update);
 route.delete('/api/serviceprovider/:id', controller_serviceprovider.delete);

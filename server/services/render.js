@@ -73,7 +73,9 @@ exports.terms_conditions = (req, res) => {
 exports.faq = (req, res) => {
     res.render('faq');
 }
-
+exports.custom = (req, res) => {
+    res.render('custom');
+}
 
 
 

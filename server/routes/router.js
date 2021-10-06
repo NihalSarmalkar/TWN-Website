@@ -99,6 +99,13 @@ route.get('/add-serviceprovider', services.add_serviceprovider)
 
 route.get('/faq', services.faq)
 
+route.get('/custom', services.custom)
+
+
+
+
+
+
 
 
 

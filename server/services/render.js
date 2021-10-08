@@ -73,7 +73,9 @@ exports.terms_conditions = (req, res) => {
 exports.faq = (req, res) => {
     res.render('faq');
 }
-
+exports.custom = (req, res) => {
+    res.render('custom');
+}
 
 
 
@@ -207,6 +209,7 @@ exports.post_page = (req, res) => {
             res.send(err);
         })
 }
+<<<<<<< HEAD
 
 exports.service_provider_details = (req, res) => {
     axios.get('http://localhost:3000/api/serviceprovider', { params: { id: req.query.id } })
@@ -217,3 +220,5 @@ exports.service_provider_details = (req, res) => {
             res.send(err);
         })
 }
+=======
+>>>>>>> 27a8ef3083344fff2130561008f3c87b6ea845df

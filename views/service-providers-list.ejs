@@ -56,14 +56,6 @@
                                 <h2>
                                     <%= user[i].vendor_name %>
                                 </h2>
-                                <h4>
-                                    <%= user[i].address %>
-
-                                </h4>
-                                <h4>
-                                    <%= user[i].timing %>
-
-                                </h4>
                                 <ul>
 
                                     <li>
@@ -72,7 +64,7 @@
                                         </a><br>
 
                                     </li>
-                                    <a href=""><button type="submit">Select</button></a>
+                                    <a href="/service-provider-details?id=<%= user[i]._id%>"><button type="submit">Select</button></a>
 
 
 

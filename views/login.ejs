@@ -13,11 +13,11 @@
             color: #1da1f2;
             transition: .5s ease;
         }
-
+        
         a:hover {
             color: #0080ff;
         }
-
+        
         .form {
             background: rgb(10 9 30 / 90%);
             padding: 40px;
@@ -28,19 +28,19 @@
             background-color: #ffffff;
             border-radius: 20px;
         }
-
+        
         .top-area {
             list-style: none;
             padding: 0;
             margin: 0 0 40px 0;
         }
-
+        
         .top-area:after {
             content: "";
             display: table;
             clear: both;
         }
-
+        
         .top-area li a {
             display: block;
             text-decoration: none;
@@ -54,27 +54,27 @@
             cursor: pointer;
             transition: .5s ease;
         }
-
+        
         .top-area li a:hover {
             background: #b10b1f;
             color: #ffffff;
         }
-
+        
         .top-area .active a {
             background: #041c3c;
             color: #ffffff;
         }
-
+        
         .tab-content>div:last-child {
             display: none;
         }
-
+        
         h1 {
             text-align: center;
             color: #000000;
             font-weight: 300;
         }
-
+        
         label {
             transform: translateY(6px);
             left: 13px;
@@ -88,27 +88,27 @@
             font-size: 19px;
             font-weight: 700;
         }
-
+        
         label .req {
             margin: 2px;
             color: #1da1f2;
         }
-
+        
         label.active {
             -webkit-transform: translateY(50px);
             transform: translateY(50px);
             left: 2px;
             font-size: 14px;
         }
-
+        
         label.active .req {
             opacity: 0;
         }
-
+        
         label.highlight {
             color: #ffffff;
         }
-
+        
         input,
         textarea {
             font-size: 16px;
@@ -123,43 +123,41 @@
             padding: 10px;
             margin: 10px;
             border-radius: 5px;
-
-
         }
-
+        
         input:focus,
         textarea:focus {
             outline: 0;
             border-color: #b10b1f;
         }
-
+        
         textarea {
             border: 2px solid #a0b3b0;
             resize: vertical;
             border-radius: 4px;
         }
-
+        
         .label-field {
             position: relative;
             margin-bottom: 40px;
         }
-
+        
         .top-row:after {
             content: "";
             display: table;
             clear: both;
         }
-
+        
         .top-row>div {
             float: left;
             width: 48%;
             margin-right: 4%;
         }
-
+        
         .top-row>div:last-child {
             margin: 0;
         }
-
+        
         .button {
             border: 0;
             outline: none;
@@ -174,28 +172,28 @@
             transition: all 0.5s ease;
             -webkit-appearance: none;
         }
-
+        
         .button:hover,
         .button:focus {
             background: #0080ff;
         }
-
+        
         .button-block {
             display: block;
             width: 100%;
         }
-
+        
         .forgot {
             margin-top: -20px;
             text-align: right;
         }
-
+        
         @media (max-width: 765px) {
             label {
                 left: 0;
             }
         }
-
+        
         .fileUpload {
             background: #1da1f2;
             -webkit-border-radius: 15px;
@@ -213,14 +211,14 @@
             width: 120px;
             cursor: pointer;
         }
-
+        
         .fileUpload:hover,
         .fileUpload:active,
         .fileUpload:focus {
             background: #3868cd;
             cursor: pointer;
         }
-
+        
         .fileUpload input.upload {
             position: absolute;
             top: 0;
@@ -235,26 +233,26 @@
             height: 46px;
             cursor: pointer;
         }
-
+        
         input[type="file"] {
             position: fixed;
             right: 100%;
             bottom: 100%;
         }
-
+        
         .custom-file-upload {
             border: 1px solid #ccc;
             display: inline-block;
             padding: 6px 12px;
             cursor: pointer;
         }
-
+        
         .upper {
             display: flex;
             justify-content: center;
             padding-top: 20px;
         }
-
+        
         .btn_submit {
             background-color: #b10b1f;
             border: none;
@@ -269,19 +267,20 @@
             margin: auto;
             margin-top: 28px;
         }
+        
         .btn_submit:hover {
-          background-color: #041c3c;
+            background-color: #041c3c;
         }
     </style>
 </head>
 
-<body style="background-image : url('img/about-2.png')">
+<body>
     <div class="upper">
         <img src="img/TWN Logo.jpg" alt="">
 
     </div>
 
-    <div class="form" >
+    <div class="form">
 
         <ul class="top-area">
             <li class="tab active"><a href="#signup">SIGN IN</a></li>
@@ -340,7 +339,7 @@
 
                         </div>
                         <div class="form-row">
-                
+
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-6" type="email" name="email" placeholder="Email Address">

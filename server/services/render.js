@@ -207,3 +207,13 @@ exports.post_page = (req, res) => {
             res.send(err);
         })
 }
+
+exports.service_provider_details = (req, res) => {
+    axios.get('http://localhost:3000/api/serviceprovider', { params: { id: req.query.id } })
+        .then(function(userdata) {
+            res.render("service-provider-details", { user: userdata.data })
+        })
+        .catch(err => {
+            res.send(err);
+        })
+}

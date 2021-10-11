@@ -76,7 +76,9 @@ exports.faq = (req, res) => {
 exports.custom = (req, res) => {
     res.render('custom');
 }
-
+exports.forms = (req, res) => {
+    res.render('forms');
+}
 
 
 

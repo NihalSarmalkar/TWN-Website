@@ -101,7 +101,7 @@ route.get('/faq', services.faq)
 
 route.get('/custom', services.custom)
 
-
+route.get('/forms', services.forms)
 
 
 

@@ -151,7 +151,6 @@ a:hover {
 }
 
 .global-page-header {
-  
     background-size: cover;
     padding: 120px 0 25px 0;
     position: relative;
@@ -208,7 +207,6 @@ a:hover {
 /*=== MEDIA QUERY ===*/
 
 .top-bar {
- 
     top: 0;
     width: 100%;
     background: #fff;
@@ -316,7 +314,6 @@ a:hover {
 #hero-area {
     background: url("../img/slider.jpg") no-repeat 50%;
     background-size: cover;
-   
     padding: 230px 0;
     color: #fff;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
@@ -360,29 +357,28 @@ a:hover {
 }
 
 #home .btn {
-  display: inline-block;
-  text-decoration: none;
-  background: #041c3c;
-  color: #FFF;
-  padding: 20px 35px;
-  width: 200px;
-  height: 125px;
-  line-height: 120px;
-  border-radius: 50%;
-  text-align: center;
-  font-weight: bold;
-  vertical-align: middle;
-  overflow: hidden;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-  border-bottom: solid 3px #b10b1f;
-  transition: .4s;
-  float: center;
+    display: inline-block;
+    text-decoration: none;
+    background: #041c3c;
+    color: #FFF;
+    padding: 20px 35px;
+    width: 200px;
+    height: 125px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #b10b1f;
+    transition: .4s;
+    float: center;
 }
 
 #cta {
     background: #041c3c;
     background-size: cover;
-
     padding: 30px 0;
     text-align: center;
     position: relative;
@@ -399,12 +395,11 @@ a:hover {
     margin-bottom: 15px;
     color: #fff;
 }
+
 #ctaa {
     background: #041c3c;
     background-size: cover;
-
     padding: 30px 0;
-
     text-align: center;
     position: relative;
     color: #fff;
@@ -417,14 +412,12 @@ a:hover {
 }
 
 #ctaa .block h4 {
-
     color: #fff;
 }
 
 #call-to-action {
     background: #041c3c;
     background-size: cover;
-   
     padding: 80px 0;
     text-align: center;
     position: relative;
@@ -1610,6 +1603,7 @@ ul.social-icons li {
     align-self: flex-end;
     float: right;
 }
+
 .btnn-left {
     background-color: #041c3c;
     border: none;
@@ -1624,12 +1618,15 @@ ul.social-icons li {
     align-self: flex-end;
     float: left;
 }
+
 .btnn:hover {
     background-color: #b10b1f;
 }
+
 .btnn-left:hover {
     background-color: #b10b1f;
 }
+
 .btn {
     background-color: DodgerBlue;
     border: none;
@@ -1894,130 +1891,262 @@ textarea {
     height: 100px;
 }
 
+
 /*responsive map*/
+
 .map {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
 
 .map iframe,
 .map object,
 .map embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
+
+
 /*spinner*/
+
 #loading {
-	width: 100%;
-	height: 100vh;
-	background: #fff url('../spinner.gif') no-repeat center center;
-	z-index: 99999;
-	position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url('../spinner.gif') no-repeat center center;
+    z-index: 99999;
+    position: fixed;
 }
+
+
 /*dashboard table overflow*/
+
 .scrollit {
-    overflow-y:scroll;
-    height:400px;
-
-
+    overflow-y: scroll;
+    height: 400px;
 }
+
 .scrollitt {
-    overflow-y:scroll;
-    height:200px;
+    overflow-y: scroll;
+    height: 200px;
 }
 
-::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-	background: transparent;  /* Optional: just make scrollbar invisible */}
-	
-	
-    element.style {
-    }
-    .pt-7 {
-        padding-top: 5rem !important;
-    }
-    .w-100 {
-        width: 100% !important;
-    }
-    .col {
-      -webkit-box-flex: 1;
-      -ms-flex: 1 0 0%;
-      flex: 1 0 0%;
-    }
+ ::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+element.style {}
+
+.pt-7 {
+    padding-top: 5rem !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.col {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+}
+
 
 /* The Modal (background) */
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
 }
+
 
 /* Modal Content */
+
 .modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
 }
 
+
 /* Add Animation */
+
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
 @keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
+
 /* The Close Button */
+
 .close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .modal-header {
-  padding: 2px 16px;
-  background-color: #b10b1f;
-  color: white;
-
+    padding: 2px 16px;
+    background-color: #b10b1f;
+    color: white;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+    padding: 2px 16px;
+}
 
 .modal-footer {
-  padding: 2px 16px;
-  background-color: #b10b1f;
-  color: white;
+    padding: 2px 16px;
+    background-color: #b10b1f;
+    color: white;
+}
+
+.service-1 {
+    background: rgb(230 227 227 / 70%) !important;
+    width: 512px;
+    height: 287px;
+}
+
+.service-3 {
+    background: rgb(230 227 227 / 70%) !important;
+    width: 512px;
+    height: 287px;
+}
+
+.service-5 {
+    background: rgb(230 227 227 / 70%) !important;
+    width: 512px;
+    height: 287px;
+}
+
+.service-2 {
+    background: rgba(187, 187, 187) !important;
+    width: 512px;
+    height: 287px;
+}
+
+.service-4 {
+    background: rgba(187, 187, 187) !important;
+    width: 512px;
+    height: 287px;
+}
+
+.service-6 {
+    background: rgba(187, 187, 187) !important;
+    width: 512px;
+    height: 287px;
+}
+
+.service_logo img {
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    /* padding: 5px; */
+    /* margin: 5px; */
+    margin-bottom: 10px;
+}
+
+.service_btn .btnn {
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    padding: 0px 0px;
+    margin-bottom: 5px;
+}
+
+.service_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.servicegrid .block {
+    padding: 54px 65px;
+    color: #000;
+}
+
+.servicegrid {
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 480px) {
+    .service-1 {
+        width: 382px;
+    }
+    .service-3 {
+        width: 382px;
+    }
+    .service-5 {
+        width: 382px;
+    }
+    .service-2 {
+        width: 382px;
+    }
+    .service-4 {
+        width: 382px;
+    }
+    .service-6 {
+        width: 382px;
+    }
 }

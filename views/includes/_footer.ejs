@@ -62,6 +62,7 @@
             </div>
         </div>
     </div>
+    <!-- <a href='https://www.freepik.com/vectors/abstract'>Abstract vector created by macrovector - www.freepik.com</a> -->
 </footer>
 <!-- /#footer -->
 
@@ -253,22 +254,21 @@
     }
 </script>
 <script>
+    // Select required elements from the DOM
+    const modal = document.querySelector("#modal");
+    const body = document.querySelector("body");
 
-  // Select required elements from the DOM
-  const modal = document.querySelector("#modal");
-  const body = document.querySelector("body");
+    const showModal = function(e) {
+        modal.classList.toggle("hidden");
 
-  const showModal = function (e) {
-      modal.classList.toggle("hidden");
-
-      if (!modal.classList.contains("hidden")) {
-          // Disable scroll
-          body.style.overflow = "hidden";
-      } else {
-          // Enable scroll
-          body.style.overflow = "auto";
-      }
-  };
+        if (!modal.classList.contains("hidden")) {
+            // Disable scroll
+            body.style.overflow = "hidden";
+        } else {
+            // Enable scroll
+            body.style.overflow = "auto";
+        }
+    };
 </script>
 </body>
 

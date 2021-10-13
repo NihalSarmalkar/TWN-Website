@@ -36,7 +36,7 @@
 ==================================================
     Works Section Start
 ================================================== -->
-
+    <!-- 
     <section id="blog-full-width">
         <div class="container">
             <div class="row">
@@ -75,6 +75,113 @@
                     <% } %>
 
 
+
+            </div>
+        </div>
+    </section> -->
+    <section id="blog-full-width">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="sidebar">
+
+                        <div class="author widget">
+
+                            <div class="author-body text-center">
+                                <div class="author-img" style="margin: 30px;">
+                                    <img src="img/TWN Logo.jpg">
+                                </div>
+                                <div class="author-bio">
+                                    <h3>Service provider List</h3>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="recent-post widget">
+                            <h3>Recent Posts</h3>
+                            <ol>
+                                <% for(var i = 0; i < user.length; i++) { %>
+                                    <li>
+                                        <%= user[i].vendor_name %>
+                                            <br>
+
+                                    </li>
+                                    <% } %>
+
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <% for(var i = 0; i < user.length; i++) { %>
+                        <!-- <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
+                            <div class="blog-post-image">
+                                <img class="img-fluid" src="upload/<%= user[i].image_technician[0] %>" alt="no image available" /></a>
+                            </div>
+                            <div class="blog-content">
+                                <h2 class="blogpost-title">
+                                    <a href="">
+
+                                    </a>
+                                </h2>
+                                <h3 class="blogpost-title">
+                                    <a href="">
+
+                                    </a>
+                                </h3>
+                                <div class="blog-meta">
+
+                                    <span></span>
+
+                                </div>
+                                <p>
+                                    <br>
+                                    <a href="/service-provider-details?id=<%= user[i]._id%>" class="btn btn-dafault btn-details hvr-bounce-to-right">Select</a>
+                            </div>
+                        </article> -->
+                        <br>
+                        <br>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 mt-3">
+                                    <div class="card1">
+                                        <div class="card-horizontal">
+                                            <div class="img-square-wrapper">
+                                                <img class="" style="width: 100px; height: 100px; border-radius: 50%;" src="upload/<%= user[i].image_technician[0] %>" alt="Card image cap">
+
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    <%= user[i].vendor_name %>
+                                                </h4>
+
+                                            </div>
+                                            <div class="card-body">
+                                                <a href="/service-provider-details?id=<%= user[i]._id%>"><button class="btnn">Select</button></a>
+
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+
+                                            <small class="text-muted"><i class="ion-map"></i> DISTANCE : 5.8 KM</small>
+                                            <br>
+                                            <small class="text-muted"> <i class="ion-ios-clock"></i> TIMINGS : 9AM - 10PM</small>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <% } %>
+
+
+                </div>
 
             </div>
         </div>

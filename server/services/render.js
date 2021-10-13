@@ -76,7 +76,9 @@ exports.faq = (req, res) => {
 exports.custom = (req, res) => {
     res.render('custom');
 }
-
+exports.forms = (req, res) => {
+    res.render('forms');
+}
 
 
 
@@ -213,6 +215,7 @@ exports.post_page = (req, res) => {
 exports.service_provider_details = (req, res) => {
     axios.get('http://localhost:3000/api/serviceprovider', { params: { id: req.query.id } })
         .then(function(userdata) {
+            console.log(userdata.data[0])
             res.render("service-provider-details", { user: userdata.data })
         })
         .catch(err => {

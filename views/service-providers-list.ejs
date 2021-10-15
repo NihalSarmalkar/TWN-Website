@@ -84,24 +84,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="sidebar">
-
-                        <div class="author widget">
-
-                            <div class="author-body text-center">
-                                <div class="author-img" style="margin: 30px;">
-                                    <img src="img/TWN Logo.jpg">
-                                </div>
-                                <div class="author-bio">
-                                    <h3>Service provider List</h3>
-
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="recent-post widget">
-                            <h3>Recent Posts</h3>
+                        <div class="recent-post widget" style="border-radius: 15px;">
+                            <h3>Service Providers</h3>
                             <ol>
                                 <% for(var i = 0; i < user.length; i++) { %>
                                     <li>
@@ -160,7 +144,7 @@
 
                                             </div>
                                             <div class="card-body">
-                                                <a href="/service-provider-details?id=<%= user[i]._id%>"><button class="btnn">Select</button></a>
+                                                <a href="/service-provider-details?id=<%= user[i]._id%>"><button class="btnn btnn2">Select</button></a>
 
                                             </div>
                                         </div>

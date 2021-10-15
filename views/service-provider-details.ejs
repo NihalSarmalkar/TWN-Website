@@ -50,7 +50,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;border: 2px solid #041c3c;" alt="" class="img-fluid"></img><br><br>
-                    <h3 STYLE="font-size:200%;  text-align: center;" class="subtitle wow fadeInUp" data-wow-delay=".3s" data-wow-duration="500ms">
+                            <h3 STYLE="font-size:200%;  text-align: center;" class="subtitle wow fadeInUp" data-wow-delay=".3s" data-wow-duration="500ms">
                         <%= user.vendor_name %>
                     </h3>
                     <div>
@@ -81,13 +81,14 @@
                             <BR>
 
                             <h3 style="font-size:150%;" class="subtitle wow fadeInUp" data-wow-delay=".3s" data-wow-duration="500ms"><i class="ion-ios-location"></i> ADDRESS :</h3>
-                            <%= user.address %>
-                                <h3 style="font-size:150%;" class="subtitle wow fadeInUp" data-wow-delay=".3s" data-wow-duration="500ms"><i class="ion-map"></i> DISTANCE :</h3> 5.9 Km
-                                <BR>
-                                <BR>
+                          <p style="color:black;"> <b> <%= user.address %></b> </p>
+                                <h3 style="font-size:150%;" class="subtitle wow fadeInUp" data-wow-delay=".3s" data-wow-duration="500ms"><i class="ion-map"></i> DISTANCE :</h3><p style="color:black;"><b> 5.9 Km </b></p>
+
                                 <h3 style="font-size:150%;" class="subtitle wow fadeInUp" data-wow-delay=".3s" data-wow-duration="500ms"><i class="ion-ios-clock"></i> TIMINGS :
-                                    <%= user.timings %>
+                                <p style="color:black;"> <br> <b>Opens at</b>  <%= user.timings %></p>
                                 </h3>
+
+
 
 
 

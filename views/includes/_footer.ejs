@@ -294,39 +294,44 @@
     };
 </script>
 <script>
-// Get the modal
-var modal = document.getElementById('id01');
+    // Get the modal
+    var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 </script>
 <script>
-// Get the modal
-var modal = document.getElementById('id02');
+    // Get the modal
+    var modal = document.getElementById('id02');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
-  $('#formid input[required]').on('input propertychange paste change', function() {
+    $('#formid input[required]').on('input propertychange paste change', function() {
 
-  var empty = $('#formid').find('input[required]').filter(function() {
-    return this.value == '';
-  });
+        var empty = $('#formid').find('input[required]').filter(function() {
+            return this.value == '';
+        });
 
-  $('#formsubmit').prop('disabled', (empty.length))
+        $('#formsubmit').prop('disabled', (empty.length))
 
-})
+    })
 </script>
+<script src="/assets/ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('paragraph_3');
+</script>
+
 </body>
 
 </html>

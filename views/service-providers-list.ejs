@@ -36,7 +36,7 @@
 ==================================================
     Works Section Start
 ================================================== -->
-    <!-- 
+    <!--
     <section id="blog-full-width">
         <div class="container">
             <div class="row">
@@ -85,23 +85,10 @@
                 <div class="col-md-4">
                     <div class="sidebar">
 
-                        <div class="author widget">
-
-                            <div class="author-body text-center">
-                                <div class="author-img" style="margin: 30px;">
-                                    <img src="img/TWN Logo.jpg">
-                                </div>
-                                <div class="author-bio">
-                                    <h3>Service provider List</h3>
-
-
-                                </div>
-                            </div>
-                        </div>
 
 
                         <div class="recent-post widget">
-                            <h3>Recent Posts</h3>
+                            <h3>Service Providers</h3>
                             <ol>
                                 <% for(var i = 0; i < user.length; i++) { %>
                                     <li>
@@ -147,10 +134,10 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-12 mt-3">
-                                    <div class="card1">
-                                        <div class="card-horizontal">
-                                            <div class="img-square-wrapper">
-                                                <img class="" style="width: 100px; height: 100px; border-radius: 50%;" src="upload/<%= user[i].image_technician[0] %>" alt="Card image cap">
+                                    <div class="card1" >
+                                        <div class="card-horizontal" >
+                                            <div class="img-square-wrapper" style="padding-top: 5px;padding-bottom: 5px;padding-left: 5px;">
+                                                <img class="" style="width: 100px; height: 100px;border-radius:50%;" src="upload/<%= user[i].image_technician[0] %>" alt="Card image cap">
 
                                             </div>
                                             <div class="card-body">
@@ -160,15 +147,15 @@
 
                                             </div>
                                             <div class="card-body">
-                                                <a href="/service-provider-details?id=<%= user[i]._id%>"><button class="btnn">Select</button></a>
+                                                <a href="/service-provider-details?id=<%= user[i]._id%>"><button class="btnn" style="border-radius:5px;">Select</button></a>
 
                                             </div>
                                         </div>
                                         <div class="card-footer">
 
-                                            <small class="text-muted"><i class="ion-map"></i> DISTANCE : 5.8 KM</small>
+                                            <small class="text-muted" ><i class="ion-map" style="color:#041c3c;"></i> DISTANCE : 5.8 KM</small>
                                             <br>
-                                            <small class="text-muted"> <i class="ion-ios-clock"></i> TIMINGS : 9AM - 10PM</small>
+                                            <small class="text-muted" > <i class="ion-ios-clock" style="color:#041c3c;"></i> TIMINGS : 9AM - 10PM</small>
 
 
                                         </div>

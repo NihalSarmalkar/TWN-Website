@@ -32,48 +32,7 @@
 ==================================================
     Service Page Section  Start
 ================================================== -->
-    <section id="service-page" class="pages service-page">
-        <div class="container">
-            <h2 class="subtitle wow fadeInUp animated" data-wow-delay=".3s" data-wow-duration="500ms" style="text-align: center;">Select services</h2>
-            <div class="row">
-                <div class="col-lg-6">
-
-                    <p class="subtitle-des wow fadeInUp animated" data-wow-delay=".5s" data-wow-duration="500ms"></p>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-lg-6 order-2 order-lg-1">
-                    <div class="block">
-                        <div class="row service-parts">
-                            <div class="col-md-6">
-                                <% for(var i = 0; i < service_list.length; i++) { %>
-                                    <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
-                                        <a href="/services_provider_list"><i class="ion-ios-paper-outline" color: #041c3c></i></a>
-                                        <a href="/services_provider_list?service=<%= service_list[i]%>" style="color:#041c3c">
-                                            <h4>
-                                                <%= service_list[i] %>
-                                            </h4>
-                                        </a><br>
-                                        <button type="button" class="collapsible">Open Collapsible</button>
-                                        <div class="content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                                ex ea commodo consequat.</p>
-                                        </div>
-                                    </div>
-                                    <% } %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        </div>
-    </section>
-
-
-    <section class="about-feature clearfix">
+   <section class="about-feature clearfix">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4 px-0">
@@ -81,10 +40,10 @@
                         <div style="    background-color: white;
                         border-radius: 15px">
                             <div class="service_logo">
-                                <img src="img/16.jpg" alt="" style="width: 50px; border-radius: 50%;">
+                                <img src="img/icons/service3.png" alt="" style="width: 50px; border-radius: 50%;">
                             </div>
-                            <h2 style="text-align: center;">
-                                GENERAL SERVICE :
+                            <h2 style="text-align: center;color:#041c3c;">
+                                GENERAL SERVICE
                                 <br>
                                 <span style="font-size: medium;">(BELOW 150 CC )</span>
                             </h2>
@@ -99,11 +58,13 @@
                 </div>
                 <div class="col-lg-4 px-0">
                     <div class="block about-feature-2 wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s" style="width:100%;">
+                      <div style="    background-color: white;
+                      border-radius: 15px">
                         <div class="service_logo">
-                            <img src="img/16.jpg" alt="" style="width: 50px; border-radius: 50%;">
+                            <img src="img/icons/service4.png" alt="" style="width: 50px; border-radius: 50%;">
                         </div>
-                        <h2 style="text-align: center;">
-                            GENERAL PREMIUM SERVICE :
+                        <h2 style="text-align: center;color:#041c3c;">
+                            GENERAL PREMIUM SERVICE
                             <br>
                             <span style="font-size: medium;">( BETWEEN 150 CC – 250 CC )</span>
                         </h2>
@@ -112,15 +73,18 @@
                             <button class="btnn">Service Details</button>
 
                         </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 px-0">
                     <div class="block about-feature-3 wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".7s" style="width:100%;">
+                      <div style="    background-color: white;
+                      border-radius: 15px">
                         <div class="service_logo">
-                            <img src="img/16.jpg" alt="" style="width: 50px; border-radius: 50%;">
+                            <img src="img/icons/service3.png" alt="" style="width: 50px; border-radius: 50%;">
                         </div>
-                        <h2 style="text-align: center;">
-                            GENERAL PRO SERVICE :
+                        <h2 style="text-align: center;color:#041c3c;">
+                            GENERAL PRO SERVICE
                             <br>
                             <span style="font-size: medium;">( BETWEEN 250CC – 350CC )</span>
                         </h2>
@@ -128,6 +92,7 @@
                             <button class="btnn" style="  background-color: #b10b1f;" onMouseOver="this.style.backgroundColor='#041c3c'" onMouseOut="this.style.backgroundColor='#b10b1f'">Select</button>
                             <button class="btnn" style="  background-color: #b10b1f;" onMouseOver="this.style.backgroundColor='#041c3c'" onMouseOut="this.style.backgroundColor='#b10b1f'">Service Details</button>
 
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -139,7 +104,7 @@
                             <img src="img/16.jpg" alt="" style="width: 50px; border-radius: 50%;">
                         </div>
                         <h2 style="text-align: center;">
-                            ENGINE OIL & FILTER CHANGE :
+                            ENGINE OIL & FILTER CHANGE
                         </h2>
                         <div class="service_btn">
                             <button class="btnn">Select</button>
@@ -151,10 +116,10 @@
                 <div class="col-lg-4 px-0">
                     <div class="block about-feature-3 wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".7s" style="width:100%;">
                         <div class="service_logo">
-                            <img src="img/16.jpg" alt="" style="width: 50px; border-radius: 50%;">
+                            <img src="img/14.jpg" alt="" style="width: 50px; border-radius: 50%;">
                         </div>
                         <h2 style="text-align: center;">
-                            TYRE PUNCTURE :
+                            TYRE PUNCTURE
                         </h2>
                         <div class="service_btn">
                             <button class="btnn" style="  background-color: #b10b1f;" onMouseOver="this.style.backgroundColor='#041c3c'" onMouseOut="this.style.backgroundColor='#b10b1f'">Select</button>
@@ -170,7 +135,7 @@
                             <img src="img/16.jpg" alt="" style="width: 50px; border-radius: 50%;">
                         </div>
                         <h2 style="text-align: center;">
-                            WASHING :
+                            WASHING
                         </h2>
                         <div class="service_btn">
                             <button class="btnn" style="">Select</button>
@@ -182,10 +147,10 @@
                 <div class="col-lg-4 px-0">
                     <div class="block about-feature-3 wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".7s" style="width:100%;">
                         <div class="service_logo">
-                            <img src="img/16.jpg" alt="" style="width: 50px; border-radius: 50%;">
+                            <img src="img/icons/service5.png" alt="" style="width: 50px; border-radius: 50%;">
                         </div>
                         <h2 style="text-align: center;">
-                            CUSTOMISED SERVICE :
+                            CUSTOMISED SERVICE
                         </h2>
                         <div class="service_btn">
                             <button class="btnn" style="  background-color: #b10b1f;" onMouseOver="this.style.backgroundColor='#041c3c'" onMouseOut="this.style.backgroundColor='#b10b1f'">Select</button>
@@ -197,7 +162,7 @@
                 <div class="col-lg-4 px-0">
                     <div class="block about-feature-2 wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s" style="width:100%;">
                         <div class="service_logo">
-                            <img src="img/16.jpg" alt="" style="width: 50px; border-radius: 50%;">
+                            <img src="img/icons/paint.png" alt="" style="width: 50px; border-radius: 50%;">
                         </div>
                         <h2 style="text-align: center;">
                             PAINTING :

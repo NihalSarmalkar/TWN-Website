@@ -34,27 +34,13 @@ exports.services_provider_list_details = (req, res) => {
 
 
 exports.services_2wheeler = (req, res) => {
-    let one = 'http://localhost:3000/api/serviceprovider'
-    const requestOne = axios.get(one);
-    axios.all([requestOne]).then(axios.spread((...responses) => {
-        const responseOne = responses[0]
-        var arr = responseOne['data']
-        var arr2 = []
-        for (let i in arr) {
-            arr2.push(arr[i]["service"])
-        }
 
 
-        let unique = arr2.filter((item, i, ar) => ar.indexOf(item) === i);
+    // let unique = arr2.filter((item, i, ar) => ar.indexOf(item) === i);
+    // console.log(unique)
 
 
-        res.render('service', { service_list: unique });
-
-        // use/access the results 
-    })).catch(errors => {
-        // react on errors.
-        res.send(errors);
-    })
+    res.render('service');
 
     // axios.get('http://localhost:3000/api/serviceprovider')
     //     .then(function(response) {
@@ -195,7 +181,12 @@ exports.update_serviceprovider = (req, res) => {
 exports.services_provider_list = (req, res) => {
     axios.get('http://localhost:3000/api/serviceprovider', { params: { service: req.query.service } })
         .then(function(userdata) {
-            res.render("service-providers-list", { user: userdata.data })
+            if (userdata.data[0] === undefined) {
+                message = "There is no vendor for this service provider !"
+            } else {
+                message = ""
+            }
+            res.render("service-providers-list", { user: userdata.data, message: message })
         })
         .catch(err => {
             res.send(err);

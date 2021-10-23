@@ -261,7 +261,7 @@ a:hover {
     box-shadow: none;
     display: block;
     opacity: 0;
-    z-index: 1;
+    z-index: 100;
     visibility: hidden;
     -webkit-transform: scale(0.8);
     transform: scale(0.8);
@@ -2527,4 +2527,16 @@ element.style {}
 .service_btn {
     padding: 5px 12px;
     margin: 0px 11px;
+}
+
+.service_btn a {
+    width: 100%;
+}
+
+.global-page-header {
+    padding: 25px 25px;
+}
+
+#call-to-action {
+    padding: 21px 0;
 }

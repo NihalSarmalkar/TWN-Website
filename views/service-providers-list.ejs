@@ -81,28 +81,13 @@
     </section> -->
     <section id="blog-full-width">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="sidebar">
+            <div class="row" style="justify-content: center;">
+                <h1 style="color: red;">
+                    <%= message %>
+                </h1>
 
-
-
-                        <div class="recent-post widget">
-                            <h3>Service Providers</h3>
-                            <ol>
-                                <% for(var i = 0; i < user.length; i++) { %>
-                                    <li>
-                                        <%= user[i].vendor_name %>
-                                            <br>
-
-                                    </li>
-                                    <% } %>
-
-                            </ol>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-8">
+
                     <% for(var i = 0; i < user.length; i++) { %>
                         <!-- <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
                             <div class="blog-post-image">
@@ -173,6 +158,13 @@
             </div>
         </div>
     </section>
+    <script>
+        console.log(user.length)
+        if (user) {
+            document.getElementById('message').innerHTML = "There's no vendor for this service";
+
+        }
+    </script>
 
 
 

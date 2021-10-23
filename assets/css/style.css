@@ -2115,7 +2115,7 @@ element.style {}
 
 .service_logo img {
     width: 50px;
-    border-radius: 50%;
+    
     display: block;
     margin: auto;
     /* padding: 5px; */

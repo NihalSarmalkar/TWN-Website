@@ -18,6 +18,12 @@ exports.create = (req, res) => {
     const user = new serviceproviderdb({
         vendor_name: req.body.vendor_name,
         service: req.body.service,
+        service1: req.body.service1,
+        service2: req.body.service2,
+        service3: req.body.service3,
+        service4: req.body.service4,
+        service5: req.body.service5,
+        service6: req.body.service6,
         address: req.body.address,
         timing: req.body.timings,
         benificiary_name: req.body.benificiary_name,
@@ -53,13 +59,10 @@ exports.create = (req, res) => {
 
 // retrieve and return all users/ retrive and return a single user
 exports.find = (req, res) => {
-    if (req.query.service) {
+    if (req.query.service == "GENERAL PREMIUM SERVICE : ( BETWEEN 150 CC – 250 CC )") {
 
         serviceproviderdb.find({ "service": req.query.service })
             .then(data1 => {
-                console.log("service section")
-
-                console.log(data1)
 
 
                 if (!data1) {
@@ -72,9 +75,9 @@ exports.find = (req, res) => {
                 res.status(500).send({ message: "Erro retrieving user with id " + id })
             })
 
-    } else if (req.query.service1) {
+    } else if (req.query.service == "TYRE PUNCTURE") {
 
-        serviceproviderdb.find({ "service1": req.query.service1 })
+        serviceproviderdb.find({ "service1": req.query.service })
             .then(data1 => {
 
                 if (!data1) {
@@ -87,9 +90,9 @@ exports.find = (req, res) => {
                 res.status(500).send({ message: "Erro retrieving user with id " + id })
             })
 
-    } else if (req.query.service2) {
+    } else if (req.query.service == "GENERAL SERVICE : (BELOW 150 CC )") {
 
-        serviceproviderdb.find({ "service2": req.query.service2 })
+        serviceproviderdb.find({ "service2": req.query.service })
             .then(data => {
 
                 if (!data) {
@@ -102,11 +105,12 @@ exports.find = (req, res) => {
                 res.status(500).send({ message: "Erro retrieving user with id " + id })
             })
 
-    } else if (req.query.service3) {
+    } else if (req.query.service == "GENERAL PRO SERVICE : ( BETWEEN 250CC – 350CC )") {
 
-        serviceproviderdb.find({ "service3": req.query.service3 })
+        serviceproviderdb.find({ "service3": req.query.service })
             .then(data3 => {
-                console.log(data1)
+                console.log("pro")
+
 
                 if (!data3) {
                     res.status(404).send({ message: "Not found user with id " + id })
@@ -118,9 +122,25 @@ exports.find = (req, res) => {
                 res.status(500).send({ message: "Erro retrieving user with id " + id })
             })
 
-    } else if (req.query.service4) {
+    } else if (req.query.service == "ENGINE OIL FILTER CHANGE") {
 
-        serviceproviderdb.find({ "service4": req.query.service4 })
+        serviceproviderdb.find({ "service4": req.query.service })
+            .then(data5 => {
+                console.log("oil")
+
+                if (!data5) {
+                    res.status(404).send({ message: "Not found user with id " + id })
+                } else {
+                    res.send(data5)
+                }
+            })
+            .catch(err => {
+                res.status(500).send({ message: "Erro retrieving user with id " + id })
+            })
+
+    } else if (req.query.service == "WASHING") {
+
+        serviceproviderdb.find({ "service5": req.query.service })
             .then(data1 => {
 
                 if (!data1) {
@@ -133,24 +153,9 @@ exports.find = (req, res) => {
                 res.status(500).send({ message: "Erro retrieving user with id " + id })
             })
 
-    } else if (req.query.service5) {
+    } else if (req.query.service == "PAINTING") {
 
-        serviceproviderdb.find({ "service5": req.query.service5 })
-            .then(data1 => {
-
-                if (!data1) {
-                    res.status(404).send({ message: "Not found user with id " + id })
-                } else {
-                    res.send(data1)
-                }
-            })
-            .catch(err => {
-                res.status(500).send({ message: "Erro retrieving user with id " + id })
-            })
-
-    } else if (req.query.service6) {
-
-        serviceproviderdb.find({ "service6": req.query.service6 })
+        serviceproviderdb.find({ "service6": req.query.service })
             .then(data1 => {
 
                 if (!data1) {

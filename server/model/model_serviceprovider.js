@@ -14,8 +14,6 @@ var schema = new mongoose.Schema({
     service5: String,
     service6: String,
 
-
-
     address: {
         type: String,
         required: true

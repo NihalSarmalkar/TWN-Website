@@ -181,6 +181,10 @@ exports.update_serviceprovider = (req, res) => {
 exports.services_provider_list = (req, res) => {
     axios.get('http://localhost:3000/api/serviceprovider', { params: { service: req.query.service } })
         .then(function(userdata) {
+            console.log("render")
+
+            console.log(req.query.service)
+
             if (userdata.data[0] === undefined) {
                 message = "There is no vendor for this service !"
             } else {

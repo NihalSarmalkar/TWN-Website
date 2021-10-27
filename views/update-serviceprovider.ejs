@@ -20,7 +20,8 @@
             <!-- form handling -->
             <form method="POST" id="update_serviceprovider">
                 <div class="new_user">
-                    <div class="form-group">
+
+                    <!-- <div class="form-group">
                         <label for="name" class="text-light">Name</label>
                         <input type="hidden" name="id" value="<%= details._id %>">
                         <input type="text" name="name" value="<%= details.name %>" placeholder="Name of service provider" required>
@@ -37,6 +38,93 @@
                         <label for="paragraph-1" class="text-light">Details</label>
                         <textarea name="details" id="paragraph-1" cols="30" rows="10" required><%= details.details %></textarea>
                     </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Save</button>
+                    </div> -->
+
+
+
+
+
+                    <div class="form-group">
+                        <label for="name" class="text-light">Vendor name</label>
+                        <input type="hidden" name="id" value="<%= details._id %>">
+                        <input type="text" name="vendor_name" value="<%= details.vendor_name %>" placeholder="Name of service provider" required>
+                    </div>
+                    <div class="form-group">
+
+                        <label for="Email" class="text-light">Services</label>
+                        <br>
+
+                        <input type="Checkbox" name="service4" value="ENGINE OIL & FILTER CHANGE" checked={ "<%= details.service4 %>"}>ENGINE OIL & FILTER CHANGE
+
+
+
+                        <!-- <input type="text" name="service" value="" placeholder="Service provided" required> -->
+                    </div>
+                    <p>
+                        <%= details.service1 %>
+                    </p>
+                    <h1>
+                        <%= details.service1 %>
+                    </h1>
+                    <p>
+                        <%= details.vendor_name %>
+                    </p>
+                    <p></p>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Address</label>
+                        <input type="text" name="address" value="<%= details.address %>" placeholder="Service provided" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Timings</label>
+                        <input type="text" name="timings" value="<%= details.timing %>" placeholder="Details of service" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Benificiary name</label>
+                        <input type="text" name="benificiary_name" value="<%= details.benificiary_name %>" placeholder="Details of service" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Bank address</label>
+                        <input type="text" name="bank_address" value="<%= details.bank_address %>" placeholder="Details of service" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Bank Account</label>
+                        <input type="text" name="bank_account" value="<%= details.bank_acc %>" placeholder="Details of service" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="paragraph-1" class="text-light">Account Type</label>
+                        <input type="text" name="account_type" value="<%= details.acc_type %>" placeholder="Details of service" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="paragraph-1" class="text-light">IFSC code</label>
+                        <input type="text" name="ifsc_code" value="<%= details.ifsc_code %>" placeholder="Details of service" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="paragraph-3" class="text-light">Aadhar card Images</label>
+                        <input type="file" name="aadhar_avatar" multiple />
+                    </div>
+                    <div class="form-group">
+                        <label for="paragraph-3" class="text-light">Driving license Images</label>
+                        <input type="file" name="license_avatar" multiple />
+                    </div>
+                    <div class="form-group">
+                        <label for="paragraph-3" class="text-light">Technician Images</label>
+                        <input type="file" name="technician_avatar" multiple />
+                    </div>
+                    <div class="form-group">
+                        <label for="paragraph-3" class="text-light">Garage Images</label>
+                        <input type="file" name="garage_avatar" multiple />
+                    </div>
+                    <div class="form-group">
+                        <label for="paragraph-3" class="text-light">Electricity bill Image</label>
+                        <input type="file" name="electricity_avatar" />
+                    </div>
+                    <div class="form-group">
+                        <label for="paragraph-3" class="text-light">Rental agreement Image</label>
+                        <input type="file" name="agreement_avatar" />
+                    </div>
+
                     <div class="form-group">
                         <button type="submit" class="btn text-dark update">Save</button>
                     </div>

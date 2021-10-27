@@ -513,9 +513,13 @@ a:hover {
 }
 
 .about-feature .block {
-    color: #fff;
+    color: rgb(255, 255, 255);
     padding: 85px 65px;
     float: left;
+}
+
+.about-feature-new .block {
+    color: rgb(0, 0, 0);
 }
 
 .about-feature .block p {
@@ -527,11 +531,19 @@ a:hover {
 }
 
 .about-feature .about-feature-2 {
-    background: #b10b1f;
+    background: rgb(177, 11, 31);
 }
 
 .about-feature .about-feature-3 {
     background: #041c3c;
+}
+
+.about-feature .about-feature-2-new {
+    background: #efefef;
+}
+
+.about-feature .about-feature-3-new {
+    background: #ffffff;
 }
 
 .works {
@@ -2519,17 +2531,14 @@ element.style {}
     padding: 1rem;
 }
 
-.about-feature .block {
+.about-feature-new .block-new {
     padding: 30px 20px;
+    border-radius: 15px;
 }
 
 .service_btn {
     padding: 5px 12px;
     margin: 0px 11px;
-}
-
-.service_btn a {
-    width: 100%;
 }
 
 .global-page-header {
@@ -2538,4 +2547,23 @@ element.style {}
 
 #call-to-action {
     padding: 21px 0;
+}
+
+.about-feature {
+    margin-top: 0px;
+}
+
+.service_btn a {
+    width: 100%;
+}
+
+.col-lg-4-new {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 24.333333%;
+}
+
+.owl-theme {
+    width: 350.333px;
+    /* margin-right: 50px; */
 }

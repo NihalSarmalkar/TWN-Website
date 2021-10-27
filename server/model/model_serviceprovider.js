@@ -5,11 +5,17 @@ var schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    service: {
-        type: String,
-        required: true,
 
-    },
+    service: String,
+    service1: String,
+    service2: String,
+    service3: String,
+    service4: String,
+    service5: String,
+    service6: String,
+
+
+
     address: {
         type: String,
         required: true

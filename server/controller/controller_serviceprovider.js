@@ -60,6 +60,99 @@ exports.find = (req, res) => {
                 console.log("service section")
 
                 console.log(data1)
+
+
+                if (!data1) {
+                    res.status(404).send({ message: "Not found user with id " + id })
+                } else {
+                    res.send(data1)
+                }
+            })
+            .catch(err => {
+                res.status(500).send({ message: "Erro retrieving user with id " + id })
+            })
+
+    } else if (req.query.service1) {
+
+        serviceproviderdb.find({ "service1": req.query.service1 })
+            .then(data1 => {
+
+                if (!data1) {
+                    res.status(404).send({ message: "Not found user with id " + id })
+                } else {
+                    res.send(data1)
+                }
+            })
+            .catch(err => {
+                res.status(500).send({ message: "Erro retrieving user with id " + id })
+            })
+
+    } else if (req.query.service2) {
+
+        serviceproviderdb.find({ "service2": req.query.service2 })
+            .then(data => {
+
+                if (!data) {
+                    res.status(404).send({ message: "Not found user with id " + id })
+                } else {
+                    res.send(data)
+                }
+            })
+            .catch(err => {
+                res.status(500).send({ message: "Erro retrieving user with id " + id })
+            })
+
+    } else if (req.query.service3) {
+
+        serviceproviderdb.find({ "service3": req.query.service3 })
+            .then(data3 => {
+                console.log(data1)
+
+                if (!data3) {
+                    res.status(404).send({ message: "Not found user with id " + id })
+                } else {
+                    res.send(data3)
+                }
+            })
+            .catch(err => {
+                res.status(500).send({ message: "Erro retrieving user with id " + id })
+            })
+
+    } else if (req.query.service4) {
+
+        serviceproviderdb.find({ "service4": req.query.service4 })
+            .then(data1 => {
+
+                if (!data1) {
+                    res.status(404).send({ message: "Not found user with id " + id })
+                } else {
+                    res.send(data1)
+                }
+            })
+            .catch(err => {
+                res.status(500).send({ message: "Erro retrieving user with id " + id })
+            })
+
+    } else if (req.query.service5) {
+
+        serviceproviderdb.find({ "service5": req.query.service5 })
+            .then(data1 => {
+
+                if (!data1) {
+                    res.status(404).send({ message: "Not found user with id " + id })
+                } else {
+                    res.send(data1)
+                }
+            })
+            .catch(err => {
+                res.status(500).send({ message: "Erro retrieving user with id " + id })
+            })
+
+    } else if (req.query.service6) {
+
+        serviceproviderdb.find({ "service6": req.query.service6 })
+            .then(data1 => {
+
                 if (!data1) {
                     res.status(404).send({ message: "Not found user with id " + id })
                 } else {

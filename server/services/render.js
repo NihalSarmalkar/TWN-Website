@@ -182,7 +182,7 @@ exports.services_provider_list = (req, res) => {
     axios.get('http://localhost:3000/api/serviceprovider', { params: { service: req.query.service } })
         .then(function(userdata) {
             if (userdata.data[0] === undefined) {
-                message = "There is no vendor for this service provider !"
+                message = "There is no vendor for this service !"
             } else {
                 message = ""
             }

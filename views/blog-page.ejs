@@ -40,7 +40,7 @@
                             <ol>
                                 <% for(var i = 0; i < users.length; i++) { %>
                                     <li>
-                                        <a href="/post-page?id=<%= users[i]._id%>">
+                                        <a href="/post-page?id=<%= users[i]._id%>" style="color:#041c3c;">
                                             <%= users[i].title %>
                                         </a><br>
 
@@ -64,7 +64,7 @@
                                     </a>
                                 </h2>
                                 <h3 class="blogpost-title">
-                                    <a href="/post-page?id=<%= users[i]._id%>">
+                                    <a href="/post-page?id=<%= users[i]._id%>" style="color:#041c3c;">
                                         <%= users[i].tagline %>
                                     </a>
                                 </h3>

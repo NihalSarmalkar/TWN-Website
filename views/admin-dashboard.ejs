@@ -44,10 +44,10 @@
                                     </td>
 
                                     <td>
-                                        <a href="/update-blog?id=<%= users[i]._id%>" class="btn border-shadow update">
+                                        <a href="/update-blog?id=<%= users[i]._id%>" class="btn btn-white border-shadow update">
                                             <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                                         </a>
-                                        <a class="btn border-shadow delete" data-id=<%=users[i]._id %> >
+                                        <a class="btn btn-white border-shadow delete" data-id=<%=users[i]._id %> >
                                     <span class="text-gradient"><i class="fas fa-times"></i></span>
                                 </a>
                                     </td>
@@ -79,8 +79,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Service</th>
-                        <th>Price</th>
+
 
                         <th>Action</th>
                     </tr>
@@ -94,18 +93,12 @@
                             <td>
                                 <%= serviceproviderlist[i].vendor_name %>
                             </td>
-                            <td>
-                                <%= serviceproviderlist[i].service %>
-                            </td>
-                            <td>
-                                <%= serviceproviderlist[i].timings %>
-                            </td>
 
                             <td>
-                                <a href="/update-serviceprovider?id=<%= serviceproviderlist[i]._id%>" class="btn border-shadow update">
+                                <!-- <a href="/update-serviceprovider?id=<%= serviceproviderlist[i]._id%>" class="btn btn-white border-shadow update">
                                     <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                                </a>
-                                <a class="btn border-shadow delete1" id="delete_serviceprovider" data-id=<%=serviceproviderlist[i]._id %>  >
+                                </a> -->
+                                <a class="btn btn-white border-shadow delete1" id="delete_serviceprovider" data-id=<%=serviceproviderlist[i]._id %>  >
                                     <span class="text-gradient"><i class="fas fa-times"></i></span>
                                 </a>
                             </td>

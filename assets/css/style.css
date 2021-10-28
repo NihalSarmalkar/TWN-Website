@@ -2567,3 +2567,7 @@ element.style {}
     width: 350.333px;
     /* margin-right: 50px; */
 }
+
+.btn-white {
+    background-color: white;
+}

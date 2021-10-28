@@ -54,19 +54,30 @@
                     <div class="form-group">
 
                         <label for="Email" class="text-light">Services</label>
+
+                        <br>
+                        <input type="Checkbox" name="service" value="GENERAL PREMIUM SERVICE : ( BETWEEN 150 CC – 250 CC )" checked=< %=details.service %> >GENERAL PREMIUM SERVICE : ( BETWEEN 150 CC – 250 CC )
+                        <br>
+                        <input type="Checkbox" name="service2" value="GENERAL SERVICE : (BELOW 150 CC )" checked=< %=details.service2 %> >GENERAL SERVICE : (BELOW 150 CC )
+                        <br>
+                        <input type="Checkbox" name="service3" value="GENERAL PRO SERVICE : ( BETWEEN 250CC – 350CC )" checked=< %=dtails.service3 %> >GENERAL PRO SERVICE : ( BETWEEN 250CC – 350CC )
                         <br>
 
                         <input type="Checkbox" name="service4" value="ENGINE OIL & FILTER CHANGE" checked={ "<%= details.service4 %>"}>ENGINE OIL & FILTER CHANGE
+                        <br>
+                        <input type="Checkbox" name="service1" value="TYRE PUNCTURE" checked={}>TYRE PUNCTURE
+                        <br>
+                        <input type="Checkbox" name="service5" value="WASHING" checked="false">WASHING
+                        <br>
+                        <input type="Checkbox" name="service6" value="PAINTING" checked=< %=details.service6 %>>PAINTING
 
 
-
-                        <!-- <input type="text" name="service" value="" placeholder="Service provided" required> -->
                     </div>
                     <p>
                         <%= details.service1 %>
                     </p>
                     <h1>
-                        <%= details.service1 %>
+                        <%= details.service4 %>
                     </h1>
                     <p>
                         <%= details.vendor_name %>

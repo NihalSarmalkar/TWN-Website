@@ -2571,3 +2571,12 @@ element.style {}
 .btn-white {
     background-color: white;
 }
+
+@media screen and (max-width: 768px) {
+    .col-lg-4-new {
+        max-width: 117.333333%;
+    }
+    .row-new {
+        flex-direction: column;
+    }
+}

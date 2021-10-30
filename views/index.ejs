@@ -1,6 +1,160 @@
-<!-- include header -->
-<%- include('includes/_header') %>
-    <!-- /include header -->
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <!-- Basic Page Needs
+        ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="favicon.ico">
+    <title>TWN</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+        ================================================== -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Template CSS Files
+        ================================================== -->
+    <!-- Twitter Bootstrs CSS -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- Ionicons Fonts Css -->
+    <link rel="stylesheet" href="plugins/ionicons/ionicons.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="plugins/animate-css/animate.css">
+    <!-- Hero area slider css-->
+    <link rel="stylesheet" href="plugins/slider/slider.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="plugins/facncybox/jquery.fancybox.css">
+    <!-- hover -->
+    <link rel="stylesheet" href="plugins/hover/hover-min.css">
+    <!-- template main css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+
+
+    <!--
+        ==================================================
+        Header Section Start
+        ================================================== -->
+    <section class="top-bar animated-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/TWN Logo.jpg" alt="logo" style="width: 100px;">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/about">About</a>
+                                </li>
+
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Service
+                                </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="/services_2wheeler">2 Wheeler</a>
+                                        <a class="dropdown-item" href="/services_4wheeler">4 Wheeler</a>
+
+                                    </div>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/why">Why TWN?</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/blog">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/contact">Contact</a>
+                                </li>
+
+                                <% if(!locals.user){ %>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/login"><i class="fas fa-user" style="color: black;"></i>  Login/Sign up</a>
+                                    </li>
+                                    <% } %>
+
+
+
+
+                                        <li class="nav-item">
+                                            <h3 style="color: #444 !important;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    transition: .3s all;
+                                    text-transform: uppercase;
+                                    padding: 5px 15px;
+                                    display: block;">
+                                                <% if(locals.user){ %>
+                                                    <%= user.name %>
+                                                        <% } %>
+                                            </h3>
+                                        </li>
+
+
+                                        <li class="nav-item">
+                                            <i>
+                                        <img src="<% if(locals.user){ %>
+                                            <%= user.picture %>
+                                                <% } %>" style="height: 25px; width: 25px;" alt="">
+                                    </i>
+
+                                        </li>
+
+
+
+                                        <% if(locals.user){ %>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/logout"><i class="fas fa-user" style="color: black;"></i> Logout</a>
+                                            </li>
+
+                                            <% } %>
+
+
+
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <body onload="getLocation()"></body>
 
@@ -20,6 +174,11 @@ Slider Section Start
             <div class="row align-items-center">
                 <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="/img/blog/post-1.jpg" width="470" alt="hero-header" /></div>
                 <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
+                    <h1>
+
+
+
+                    </h1>
 
 
                     <h1 class="fs-6 fs-xl-7 mb-5" STYLE="FLOAT:LEFT;"><b>GET YOUR VEHICLE FIXED ANYWHERE IN BANGALORE NOW! </b></h1>
@@ -58,13 +217,15 @@ About Section Start
                         <p class="wow fadeInUp" data-wow-delay=".5s" data-wow-duration="500ms">
 
 
-                          <p>
-                            We started The Wheels Nation (TWN) to change the auto service industry. Our ultimate goal is to connect customers with the best auto repair shops which are pre verified and also provides free pick up and drop service.
-  Now getting your vehicle fixed is made easy like never before.
+                            <p>
+                                We started The Wheels Nation (TWN) to change the auto service industry. Our ultimate goal is to connect customers with the best auto repair shops which are pre verified and also provides free pick up and drop service. Now getting your vehicle fixed is
+                                made easy like never before.
 
-  <p>We’re good at fixing your vehicle
-  Our amazing network of mechanics can make your day a whole lot better. Your vehicle will love to be with us, and we will make sure that there is nothing else which can make you and your vehicle feel much safer.</p>
-                                        <p> Our amazing and talented sellers are waiting on the other side for you to book an appointment And guess what? Booking a service for your vehicle was never been this easy  – it hardly takes a minute and leave everything on us</p>
+                                <p>We’re good at fixing your vehicle Our amazing network of mechanics can make your day a whole lot better. Your vehicle will love to be with us, and we will make sure that there is nothing else which can make you and your
+                                    vehicle feel much safer.</p>
+                                <p> Our amazing and talented sellers are waiting on the other side for you to book an appointment And guess what? Booking a service for your vehicle was never been this easy – it hardly takes a minute and leave everything on
+                                    us
+                                </p>
 
 
 
@@ -80,7 +241,7 @@ About Section Start
         </div>
     </section>
     <!-- /#about -->
-<br>
+    <br>
     <div class="section-heading">
 
         <h2 class="subtitle wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">sERVICES</h2>
@@ -262,7 +423,8 @@ Portfolio Section Start
     </div>
 
     <section>
-<P STYLE="COLOR:BLACK;TEXT-ALIGN:CENTER;FONT-WEIGHT:400;">We know that its really hard to find a right mechanic to fix your vehicle . <BR>Don’t worry we got you covered & here is how we verify them </P>
+        <P STYLE="COLOR:BLACK;TEXT-ALIGN:CENTER;FONT-WEIGHT:400;">We know that its really hard to find a right mechanic to fix your vehicle .
+            <BR>Don’t worry we got you covered & here is how we verify them </P>
         <BR>
         <!--/.bg-holder-->
 

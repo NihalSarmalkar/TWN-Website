@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const bodyparser = require("body-parser");
 const path = require('path');
 const multer = require('multer')
+const cookieParser = require("cookie-parser")
 
 const connectDB = require('./server/database/connection');
 
@@ -14,6 +15,7 @@ const PORT = process.env.PORT || 8080
 
 // log requests
 app.use(morgan('tiny'));
+
 
 // mongodb connection
 connectDB();

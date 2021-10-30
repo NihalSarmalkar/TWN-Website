@@ -6,6 +6,20 @@ const controller = require('../controller/controller');
 const controller_contact = require('../controller/controller_contact');
 const controller_customer = require('../controller/controller_customer');
 const controller_serviceprovider = require('../controller/controller_serviceprovider');
+const cookieParser = require('cookie-parser')
+
+
+const { OAuth2Client } = require('google-auth-library');
+const CLIENT_ID = '863731282572-82p62ug594e2muve39hi6fund88kmi7v.apps.googleusercontent.com'
+const client = new OAuth2Client(CLIENT_ID);
+
+//To pass token to backend in json format
+route.use(express.json());
+
+// To pass a session in diffrent page
+route.use(cookieParser());
+
+
 
 
 
@@ -41,8 +55,81 @@ const upload = multer({
 
 });
 
+
+function checkAuthenticated(req, res, next) {
+
+    let token = req.cookies['session-token'];
+
+    let user = {};
+    async function verify() {
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: CLIENT_ID, // Specify the CLIENT_ID of the app that accesses the backend
+        });
+        const payload = ticket.getPayload();
+        user.name = payload.name;
+        user.email = payload.email;
+        user.picture = payload.picture;
+    }
+    verify()
+        .then(() => {
+            req.user = user;
+            next();
+        })
+        .catch(err => {
+            res.redirect('/login')
+        })
+
+}
+
+route.get('/profile', checkAuthenticated, (req, res) => {
+    let user = req.user;
+    res.render('profile', { user });
+})
+
 //home page route
-route.get('/', services.home);
+
+route.get('/', (req, res) => {
+
+    if (req.cookies['session-token']) {
+        let token = req.cookies['session-token'];
+
+        let user = {};
+        async function verify() {
+            const ticket = await client.verifyIdToken({
+                idToken: token,
+                audience: CLIENT_ID, // Specify the CLIENT_ID of the app that accesses the backend
+            });
+            const payload = ticket.getPayload();
+            user.name = payload.name;
+            user.email = payload.email;
+            user.picture = payload.picture;
+        }
+        verify()
+            .then(() => {
+                req.user = user;
+                res.render('index', { user });
+            })
+            .catch(err => {
+                res.redirect('/login')
+            })
+
+
+
+    } else {
+        res.render("index")
+    }
+
+})
+
+
+route.get('/logout', (req, res) => {
+    res.clearCookie('session-token');
+    res.redirect('/')
+
+})
+
+
 
 // adbout section route
 route.get('/about', services.about)
@@ -111,6 +198,26 @@ route.get('/service-provider-details', services.service_provider_details)
 
 
 
+//Google auth login route
+route.post('/login', (req, res) => {
+    let token = req.body.token;
+
+    async function verify() {
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: CLIENT_ID, // Specify the CLIENT_ID of the app that accesses the backend
+        });
+        const payload = ticket.getPayload();
+        const userid = payload['sub'];
+    }
+    verify()
+        .then(() => {
+            res.cookie('session-token', token);
+            res.send('success')
+        })
+        .catch(console.error);
+
+})
 
 
 

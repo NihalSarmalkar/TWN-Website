@@ -2579,4 +2579,18 @@ element.style {}
     .row-new {
         flex-direction: column;
     }
+    .btnn-new {
+        padding: 12px 18px;
+    }
+    .card-title {
+        padding: 7px 6px;
+        font-size: 1.3rem;
+    }
+    .maxwidthabout {
+        max-width: 89%;
+    }
+}
+
+.maxwidthabout {
+    max-width: 59%;
 }

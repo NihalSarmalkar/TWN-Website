@@ -122,7 +122,7 @@ exports.find = (req, res) => {
                 res.status(500).send({ message: "Erro retrieving user with id " + id })
             })
 
-    } else if (req.query.service == "ENGINE OIL FILTER CHANGE") {
+    } else if (req.query.service == "ENGINE OIL CHANGE") {
 
         serviceproviderdb.find({ "service4": req.query.service })
             .then(data5 => {
@@ -138,7 +138,7 @@ exports.find = (req, res) => {
                 res.status(500).send({ message: "Erro retrieving user with id " + id })
             })
 
-    } else if (req.query.service == "WASHING") {
+    } else if (req.query.service == "ENGINE SERVICE") {
 
         serviceproviderdb.find({ "service5": req.query.service })
             .then(data1 => {

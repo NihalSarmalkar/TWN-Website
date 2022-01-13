@@ -1,13 +1,24 @@
 
-# 🌍TWN Website
-
-  
+# TWN Website
+This is a MERN stack website build during TWN internship.
 
 ## Tech Stack
 
 **Client:** HTML, CSS, Java Script, Ejs
 
 **Server:** Nodejs, Express, MongoDB
+
+## Screenshots
+
+![App Screenshot](/readme images/Screenshot 2022-01-14 000713.png)
+![App Screenshot](/readme images/Screenshot 2022-01-14 000752.png)
+![App Screenshot](/readme images/Screenshot 2022-01-14 000819.png)
+![App Screenshot](/readme images/Screenshot 2022-01-14 000845.png)
+![App Screenshot](/readme images/Screenshot 2022-01-14 000920.png)
+![App Screenshot](/readme images/Screenshot 2022-01-14 000949.png)
+![App Screenshot](/readme images/Screenshot 2022-01-14 001012.png)
+
+
 
   
 ##  💻Run Locally
@@ -39,4 +50,3 @@ Start the server
   npm start
 ```
 
-  

@@ -9,9 +9,28 @@ This is a MERN stack website build during TWN internship.
   
 
 ## Screenshots
+![](readme%20images/Screenshot%202022-01-14%20000713.png)
+![](readme%20images/Screenshot%202022-01-14%20000752.png)
+![](readme%20images/Screenshot%202022-01-14%20000819.png)
+![](readme%20images/Screenshot%202022-01-14%20000845.png)
+![](readme%20images/Screenshot%202022-01-14%20000920.png)
+![](readme%20images/Screenshot%202022-01-14%20000949.png)
+![](readme%20images/Screenshot%202022-01-14%20001012.png)
+![](readme%20images/Screenshot%202022-01-14%20001039.png)
+![](readme%20images/Screenshot%202022-01-14%20001105.png)
+![](readme%20images/Screenshot%202022-01-14%20001134.png)
 
-Click on the link to see the images of website
-https://humane-ketchup-b79.notion.site/TWN-Github-Images-df153ba2c57443829d759806a9e5e026
+
+
+## Dashboard Images(Dashboard is used to create, update and delete Services, Blogs)
+
+
+
+![](readme%20images/Screenshot%202022-01-14%20001206.png)
+![](readme%20images/Screenshot%202022-01-14%20001228.png)
+
+
+
 
 ##  💻Run Locally
 
